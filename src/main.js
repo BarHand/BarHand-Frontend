@@ -23,6 +23,10 @@ import Button from "primevue/button";
 import InputText from "primevue/inputtext";
 import Carousel from "primevue/carousel";
 import DataView from "primevue/dataview";
+import Menubar from 'primevue/menubar';
+import Avatar from 'primevue/avatar';
+import AvatarGroup from 'primevue/avatargroup';
+
 
 
 
@@ -37,6 +41,12 @@ app.component("pv-button",Button)
 app.component("pv-input-text",InputText)
 app.component('pv-carousel', Carousel);
 app.component('pv-data-view', DataView);
+app.component('pv-menubar', Menubar);
+app.component('pv-avatar', Avatar);
+app.component('pv-avatar-group', AvatarGroup);
+
+
+
 
 
 app.mount('#app')
