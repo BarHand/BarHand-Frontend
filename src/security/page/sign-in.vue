@@ -11,7 +11,9 @@
       <label for="password1">Password</label>
       <input id="password1" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
     </div>
+    <router-link to="/">
     <pv-button label="Submit" />
+    </router-link>
   </div>
 
 </template>

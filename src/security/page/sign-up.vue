@@ -28,7 +28,9 @@
         <input type="radio" name="type" id="type2">
         <label for="type2">Bussiness</label>
       </div>
+      <router-link to="/">
       <pv-button label="Submit" />
+      </router-link>
     </div>
 
 </template>
