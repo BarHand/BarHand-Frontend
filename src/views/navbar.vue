@@ -4,7 +4,7 @@
       <template #start>
         <div class = "flex">
           <div class="m-3">
-            <RouterLink to="/home-mechanic">
+            <RouterLink to="/about">
               <h1 class="font-medium">BarHand</h1>
             </RouterLink>
 
@@ -36,10 +36,10 @@ export default{
   data(){
     return{
       navigation:[
-        { label: "Mis datos",icon:'pi pi-fw pi-home', to: "/home-customer" },
-        { label: "Productos", icon:'pi pi-fw pi-calendar',to: "/appointments-customer" },
-        { label: "Clientes", icon:'pi pi-fw pi-bell', to: "/notifications" },
-        { label: "Almacén", icon:'pi pi-fw pi-bell', to: "/notifications" },
+        { label: "Mis datos",icon:'pi pi-fw pi-home', to: "/about" },
+        { label: "Productos", icon:'pi pi-fw pi-calendar',to: "/about" },
+        { label: "Clientes", icon:'pi pi-fw pi-bell', to: "/about" },
+        { label: "Almacén", icon:'pi pi-fw pi-bell', to: "/about" },
 
       ],
       accountMenu: [{
