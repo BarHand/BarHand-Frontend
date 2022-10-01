@@ -2,17 +2,18 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
-
-import './assets/main.css'
 //Add PrimeVue
 import PrimeVue from "primevue/config";
 
+//Add PrimeFlex
+import 'primeflex/primeflex.css';
 //Add Theme
+import "primevue/resources/themes/lara-light-blue/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 
-//Add PrimeFlex
-import 'primeflex/primeflex.css';
+
+
 
 //Add Toast Service
 import ToastService from "primevue/toastservice";
