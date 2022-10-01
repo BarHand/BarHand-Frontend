@@ -21,15 +21,17 @@
         </div>
         <br>
         <div>
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
+          <RouterLink to="/about">
+            <pv-button label="LogIn" style="background-color: #9acb3c" />
+
+          </RouterLink>        </div>
       </form>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+
 </script>
 
 <style>

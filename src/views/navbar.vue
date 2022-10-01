@@ -36,9 +36,11 @@ export default{
   data(){
     return{
       navigation:[
-        { label: "Home",icon:'pi pi-fw pi-home', to: "/home-customer" },
-        { label: "Appointments", icon:'pi pi-fw pi-calendar',to: "/appointments-customer" },
-        { label: "Notifications", icon:'pi pi-fw pi-bell', to: "/notifications" },
+        { label: "Mis datos",icon:'pi pi-fw pi-home', to: "/home-customer" },
+        { label: "Productos", icon:'pi pi-fw pi-calendar',to: "/appointments-customer" },
+        { label: "Clientes", icon:'pi pi-fw pi-bell', to: "/notifications" },
+        { label: "Almacén", icon:'pi pi-fw pi-bell', to: "/notifications" },
+
       ],
       accountMenu: [{
         items: [
