@@ -11,8 +11,8 @@
 
         <div class="buttons">
           <div class="button">
-            <RouterLink to="/login">
-              <pv-button label="Login" style="background-color: #9acb3c" />
+            <RouterLink to="/sign-in">
+              <pv-button label="SignIn" style="background-color: #9acb3c" />
 
             </RouterLink>
           </div>
