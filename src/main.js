@@ -26,6 +26,8 @@ import DataView from "primevue/dataview";
 import Menubar from 'primevue/menubar';
 import Avatar from 'primevue/avatar';
 import AvatarGroup from 'primevue/avatargroup';
+import Tag from "primevue/tag";
+import Card from "primevue/card";
 
 
 
@@ -44,7 +46,8 @@ app.component('pv-data-view', DataView);
 app.component('pv-menubar', Menubar);
 app.component('pv-avatar', Avatar);
 app.component('pv-avatar-group', AvatarGroup);
-
+app.component('pv-tag', Tag)
+app.component('pv-card', Card)
 
 
 

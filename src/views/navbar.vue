@@ -4,7 +4,7 @@
       <template #start>
         <div class = "flex">
           <div class="m-3">
-            <RouterLink to="/about">
+            <RouterLink to="/home-store">
               <h1 class="font-medium">BarHand</h1>
             </RouterLink>
 
