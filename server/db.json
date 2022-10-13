@@ -71,7 +71,8 @@
       "image": "https://s3.amazonaws.com/bsalemarket/39452/product/AGU390CHIdefault.jpg",
       "available": true,
       "description": "Purple corn drink (600 ml)",
-      "id": 1
+      "id": 1,
+      "supplierID" : 1
     },
     {
       "name": "Cola KR Soda",
@@ -79,7 +80,8 @@
       "image": "https://transmarket.pe/wp-content/uploads/2020/06/KR-NARANJA-1700-ML.jpg",
       "available": true,
       "description": "Orange flavoured soda (600 ml)",
-      "id": 2
+      "id": 2,
+      "supplierID" : 1
     },
     {
       "name": "JBL Speaker",
@@ -87,7 +89,8 @@
       "image": "https://www.tradeinn.com/f/13737/137378886/jbl-flip-5-wireless-bluetooth-speaker.jpg",
       "available": true,
       "description": "Wireless bluetooth JBL speaker",
-      "id": 3
+      "id": 3,
+      "supplierID" : 2
     },
     {
       "name": "Dron XTX",
@@ -95,7 +98,8 @@
       "image": "https://cdn.pocket-lint.com/r/s/x1920/assets/images/130265-drones-news-buyer-s-guide-best-drones-image22-r2dkig0qul.jpg",
       "available": true,
       "description": "Cool flying robot ",
-      "id": 4
+      "id": 4,
+      "supplierID" : 2
     }
   ]
 }

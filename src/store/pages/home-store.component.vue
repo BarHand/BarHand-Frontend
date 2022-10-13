@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <pv-carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+    <pv-carousel :value="products" :numVisible="1" :numScroll="1" :responsiveOptions="responsiveOptions">
       <template #header>
         <h1>products  posts</h1>
       </template>

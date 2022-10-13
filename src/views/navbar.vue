@@ -36,10 +36,10 @@ export default{
   data(){
     return{
       navigation:[
-        { label: "Mis datos",icon:'pi pi-fw pi-home', to: "/about" },
-        { label: "Productos", icon:'pi pi-fw pi-calendar',to: "/about" },
-        { label: "Clientes", icon:'pi pi-fw pi-bell', to: "/about" },
-        { label: "Almacén", icon:'pi pi-fw pi-bell', to: "/about" },
+        { label: "Mis datos",icon:'pi pi-fw pi-user-edit', to: "/about" },
+        { label: "Productos", icon:'pi pi-fw pi-shopping-cart',to: "/about" },
+        { label: "Clientes", icon:'pi pi-fw pi-users', to: "/about" },
+        { label: "Almacén", icon:'pi pi-fw pi-box', to: "/about" },
 
       ],
       accountMenu: [{
