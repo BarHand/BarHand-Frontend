@@ -29,6 +29,22 @@ const router = createRouter({
       name: "home-store",
       component: ()=>import('../store/pages/home-store.component.vue'),
     },
+    {
+      path: "/store",
+      name: "store",
+      component: ()=>import('../store/pages/store-supplier.component.vue'),
+
+    },
+    {
+      path: '/edit/:id',
+      name: 'edit',
+      component: ()=>import('../store/pages/store-supplier-edit.component.vue'),
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: ()=>import('../store/pages/store-supplier-add.component.vue'),
+    },
   ]
 })
 

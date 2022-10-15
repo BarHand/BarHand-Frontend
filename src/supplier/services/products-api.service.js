@@ -17,6 +17,10 @@ export class ProductsApiService {
         return http.put(`/products/${id}`, data);
     }
 
+    edit(id, data) {
+        return http.patch(`/products/${id}`, data);
+    }
+
     delete(id) {
         return http.delete(`/products/${id}`);
     }
@@ -24,4 +28,7 @@ export class ProductsApiService {
     findByTitle(title) {
         return http.get(`/products?title=${title}`);
     }
+
+
+
 }
