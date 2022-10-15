@@ -28,7 +28,7 @@ import Avatar from 'primevue/avatar';
 import AvatarGroup from 'primevue/avatargroup';
 import Tag from "primevue/tag";
 import Card from "primevue/card";
-
+import Dialog from 'primevue/dialog';
 
 
 
@@ -48,8 +48,7 @@ app.component('pv-avatar', Avatar);
 app.component('pv-avatar-group', AvatarGroup);
 app.component('pv-tag', Tag)
 app.component('pv-card', Card)
-
-
+app.component('pv-dialog', Dialog)
 
 
 app.mount('#app')
