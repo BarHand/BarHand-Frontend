@@ -46,7 +46,7 @@
 
 <script>
 export default {
-  name: "sign-up.component",
+  name: "sign-in.component",
   data() {
     return {
       typeUser: 'Store',
