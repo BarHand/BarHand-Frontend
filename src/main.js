@@ -33,6 +33,7 @@ import Divider from "primevue/divider";
 import Dialog from 'primevue/dialog';
 import Password from "primevue/password";
 import SelectButton from "primevue/selectbutton";
+import Textarea from "primevue/textarea";
 
 
 
@@ -56,6 +57,7 @@ app.component('pv-divider', Divider);
 app.component('pv-dialog', Dialog)
 app.component('pv-password',Password)
 app.component('pv-select-button',SelectButton)
+app.component('pv-text-area', Textarea)
 
 
 app.mount('#app')
