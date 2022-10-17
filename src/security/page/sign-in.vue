@@ -1,11 +1,6 @@
 
-
 <template>
   <body>
-  <div >
-    <img src="https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg" alt="">
-  </div>
-
   <div class="container">
     <div class="card">
       <h1 class="font-light ">Hello</h1>
@@ -21,6 +16,10 @@
               <label for="password">Password</label>
               <pv-input-text id="password" type="password" />
             </div>
+            <div class="field">
+              <span class="details"> Type User :  </span>
+              <pv-select-button  v-model="typeUser" :options="optionsUser" aria-labelledby="single"/>
+            </div>
             <RouterLink to="/about">
             <pv-button label="Login"></pv-button>
             </RouterLink>
@@ -31,6 +30,7 @@
             <b class="text-black-alpha-80">OR</b>
           </pv-divider>
         </div>
+
         <div class="col-5 flex align-items-center justify-content-center">
           <RouterLink to="/sign-up">
           <pv-button label="Sign Up" icon="pi pi-user-plus" class="p-button-success"></pv-button>
@@ -46,46 +46,53 @@
 
 <script>
 export default {
+  name: "sign-up.component",
+  data() {
+    return {
+      typeUser: 'Store',
+      optionsUser: ['Store', 'Supplier'],
+    }
+  },
 
 };
 </script>
 
 <style scoped>
+* {
+
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg");
+  background-size: 100%;
+  opacity: 0.95;
+}
 .container{
-  background: #EEE;
+
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 100%;
+
 }
 
 .card{
-  background-color: #212121;
-  width: 50rem;
+  background-color: #fff;
+  max-width: 800px;
   text-align: center;
   vertical-align: center;
-  border:3px solid #212121;
+  border:3px solid #fff;
   border-radius:22px;
   opacity:0.95;
   bottom: 10%;
   position: center;
 
 }
-img{
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  opacity: 0.9;
 
-}
-h1{
-  color: #EEEEEE;
-}
-h2{
-  color: #EEEEEE;
-}
-label{
-  color: #EEEEEE;
-}
+
+
 </style>

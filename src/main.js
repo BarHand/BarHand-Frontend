@@ -29,6 +29,7 @@ import AvatarGroup from 'primevue/avatargroup';
 import Tag from "primevue/tag";
 import Card from "primevue/card";
 import Divider from "primevue/divider";
+import SelectButton from "primevue/selectbutton";
 
 
 
@@ -50,6 +51,7 @@ app.component('pv-avatar-group', AvatarGroup);
 app.component('pv-tag', Tag)
 app.component('pv-card', Card)
 app.component('pv-divider', Divider);
+app.component('pv-select-button', SelectButton)
 
 
 
