@@ -1,77 +1,98 @@
 
-
 <template>
-  <div class="card">
-    <h5>Login to BarHand</h5>
-    <div class="field">
-      <label for="Email">Email</label>
-      <input id="Email" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
+  <body>
+  <div class="container">
+    <div class="card">
+      <h1 class="font-light ">Hello</h1>
+      <h2 class="font-light">Welcome to Barhand</h2>
+      <div class="grid">
+        <div class="col-5 flex align-items-center justify-content-center">
+          <div class="p-fluid">
+            <div class="field">
+              <label for="username">Username</label>
+              <pv-input-text id="username" type="text" />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <pv-input-text id="password" type="password" />
+            </div>
+            <div class="field">
+              <span class="details"> Type User :  </span>
+              <pv-select-button  v-model="typeUser" :options="optionsUser" aria-labelledby="single"/>
+            </div>
+            <RouterLink to="/about">
+            <pv-button label="Login"></pv-button>
+            </RouterLink>
+          </div>
+        </div>
+        <div class="col-2">
+          <pv-divider layout="vertical">
+            <b class="text-black-alpha-80">OR</b>
+          </pv-divider>
+        </div>
+
+        <div class="col-5 flex align-items-center justify-content-center">
+          <RouterLink to="/sign-up">
+          <pv-button label="Sign Up" icon="pi pi-user-plus" class="p-button-success"></pv-button>
+          </RouterLink>
+        </div>
+      </div>
     </div>
-    <div class="field">
-      <label for="password1">Password</label>
-      <input id="password1" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
-    </div>
-    <router-link to="/about">
-    <pv-button label="Login" />
-    </router-link>
   </div>
+  </body>
+
 
 </template>
 
 <script>
 export default {
+  name: "sign-in.component",
+  data() {
+    return {
+      typeUser: 'Store',
+      optionsUser: ['Store', 'Supplier'],
+    }
+  },
 
 };
 </script>
 
 <style scoped>
-.p-button {
-  margin-right: .5rem;
+* {
+
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg");
+  background-size: 100%;
+  opacity: 0.95;
+}
+.container{
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
 }
 
-.p-buttonset {
-.p-button {
-  margin-right: 0;
-}
-}
-
-.sizes {
-.button {
-  margin-bottom: .5rem;
-  display: block;
-
-&:last-child {
-   margin-bottom: 0;
- }
-}
-}
-
-@media screen and (max-width: 640px) {
-  .p-button {
-    margin-bottom: .5rem;
-
-&:not(.p-button-icon-only) {
-   display: flex;
-   width: 100%;
- }
-}
-
-.p-buttonset {
-.p-button {
-  margin-bottom: 0;
-}
-}
-}
 .card{
-  justify-content: center;
-  size: auto;
+  background-color: #fff;
+  max-width: 800px;
   text-align: center;
+  vertical-align: center;
+  border:3px solid #fff;
+  border-radius:22px;
+  opacity:0.95;
+  bottom: 10%;
+  position: center;
+
 }
-.field-radiobutton{
-  display:flex;
-  justify-content: center;
-  text-align: center;
-}
+
 
 
 </style>

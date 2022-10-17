@@ -1,93 +1,303 @@
-
-
 <template>
-    <div class="card">
-      <h5>Register to BarHand</h5>
-      <div class="field">
-        <label for="FullName">Full name</label>
-        <input id="FullName" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
-      </div>
-      <div class="field">
-        <label for="Email">Email</label>
-        <input id="Email" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
-      </div>
-      <div class="field">
-        <label for="password1">Password</label>
-        <input id="password1" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
-      </div>
-      <div class="field">
-        <label for="password2">Reenterpassword</label>
-        <input id="password2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
-      </div>
-      <h5>Client Type</h5>
-      <div class="field-radiobutton">
-        <input type="radio" name="type" id="type1">
-        <label for="type1">Client</label>
-      </div>
-      <div class="field-radiobutton">
-        <input type="radio" name="type" id="type2">
-        <label for="type2">Bussiness</label>
-      </div>
-      <router-link to="/">
-      <pv-button label="Submit" />
-      </router-link>
-    </div>
+  <body>
+  <div class="container">
+    <div class="title"> Registration</div>
+    {{supplier}}
+    {{store}}
+    <form action="#">
+      <div v-if=" typeUser == 'Supplier'">
+      <div class="user-detail">
+        <div class="input-box">
+          <span class="details"> Full Name </span>
+          <pv-input-text  v-model="supplier.name" style="width: 100%" type="text" placeholder="Enter your name" required></pv-input-text>
+        </div>
 
+        <div class="input-box">
+          <span class="details"> Last Name </span>
+          <pv-input-text v-model="supplier.lastName" style="width: 100%" type="text" placeholder="Enter your last name" required></pv-input-text>
+        </div>
+
+        <div class="input-box">
+          <span class="details"> Business Name </span>
+          <pv-input-text v-model="supplier.supplierName" style="width: 100%" type="text" placeholder="Enter your business name"
+                         required></pv-input-text>
+        </div>
+
+        <div class="input-box">
+          <span class="details"> Email </span>
+          <pv-input-text v-model="supplier.email" style="width: 100%" type="text" placeholder="Enter your email" required></pv-input-text>
+        </div>
+
+        <div class="input-box">
+          <span class="details"> Address </span>
+          <pv-input-text v-model="supplier.address" style="width: 100%" type="text" placeholder="Enter your address" required></pv-input-text>
+        </div>
+
+        <div class="input-box">
+          <span class="details"> Phone </span>
+          <pv-input-text v-model="supplier.phone" style="width: 100%" type="text" placeholder="Enter your number phone" required></pv-input-text>
+        </div>
+
+        <div class="input-box">
+          <span class="details">  Image </span>
+          <pv-input-text v-model="supplier.image" style="width: 100%" type="text" placeholder="Enter your url business image"
+                         required></pv-input-text>
+        </div>
+
+
+        <div  class="input-box">
+          <span class="details"> RUC </span>
+          <pv-input-text v-model="supplier.ruc" style="width: 100%" type="text" placeholder="Enter your RUC" required> </pv-input-text>
+        </div>
+
+        <div  class="input-box">
+          <span class="details"> Category </span>
+          <pv-input-text v-model="supplier.category" style="width: 100%" type="text" placeholder="Enter your category business" required> </pv-input-text>
+        </div>
+
+        <div class="input-box">
+          <span class="details"> Description </span>
+          <pv-text-area v-model="supplier.description" style="width: 100%" type="text" placeholder="Enter your description business" required> </pv-text-area>
+        </div>
+
+        <div class="input-box">
+          <span class="details"> Password </span>
+          <pv-password v-model="supplier.password" style="width: 100%"  placeholder="Enter your Password">
+            <template #header>
+              <h6>Pick a password</h6>
+            </template>
+            <template #footer="sp">
+              {{ sp.level }}
+              <pv-divider/>
+              <p class="mt-2">Suggestions</p>
+              <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                <li>At least one lowercase</li>
+                <li>At least one uppercase</li>
+                <li>At least one numeric</li>
+                <li>Minimum 8 characters</li>
+              </ul>
+            </template>
+          </pv-password>
+        </div>
+        <div class="input-box">
+          <span class="details"> Confirm Password </span>
+          <pv-password style="width: 100%" v-model="password1" placeholder="Confirm your Password">
+            <template #header>
+              <h6>Pick a password</h6>
+            </template>
+            <template #footer="sp">
+              {{ sp.level }}
+              <pv-divider/>
+              <p class="mt-2">Suggestions</p>
+              <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                <li>At least one lowercase</li>
+                <li>At least one uppercase</li>
+                <li>At least one numeric</li>
+                <li>Minimum 8 characters</li>
+              </ul>
+            </template>
+          </pv-password>
+        </div>
+
+      </div>
+      </div>
+      <div v-if=" typeUser == 'Store'">
+        <div class="user-detail">
+          <div class="input-box">
+            <span class="details"> Full Name </span>
+            <pv-input-text  v-model="store.name" style="width: 100%" type="text" placeholder="Enter your name" required></pv-input-text>
+          </div>
+
+          <div class="input-box">
+            <span class="details"> Last Name </span>
+            <pv-input-text v-model="store.lastName" style="width: 100%" type="text" placeholder="Enter your last name" required></pv-input-text>
+          </div>
+
+          <div class="input-box">
+            <span class="details"> Business Name </span>
+            <pv-input-text v-model="store.storeName" style="width: 100%" type="text" placeholder="Enter your business name"
+                           required></pv-input-text>
+          </div>
+
+          <div class="input-box">
+            <span class="details"> Email </span>
+            <pv-input-text v-model="store.email" style="width: 100%" type="text" placeholder="Enter your email" required></pv-input-text>
+          </div>
+
+          <div class="input-box">
+            <span class="details"> Address </span>
+            <pv-input-text v-model="store.address" style="width: 100%" type="text" placeholder="Enter your address" required></pv-input-text>
+          </div>
+
+          <div class="input-box">
+            <span class="details"> Phone </span>
+            <pv-input-text v-model="store.phone" style="width: 100%" type="text" placeholder="Enter your number phone" required></pv-input-text>
+          </div>
+
+          <div class="input-box">
+            <span class="details">  Image </span>
+            <pv-input-text v-model="store.image" style="width: 100%" type="text" placeholder="Enter your url business image"
+                           required></pv-input-text>
+          </div>
+
+
+          <div class="input-box">
+            <span class="details"> Password </span>
+            <pv-password v-model="store.password" style="width: 100%"  placeholder="Enter your Password">
+              <template #header>
+                <h6>Pick a password</h6>
+              </template>
+              <template #footer="sp">
+                {{ sp.level }}
+                <pv-divider/>
+                <p class="mt-2">Suggestions</p>
+                <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                  <li>At least one lowercase</li>
+                  <li>At least one uppercase</li>
+                  <li>At least one numeric</li>
+                  <li>Minimum 8 characters</li>
+                </ul>
+              </template>
+            </pv-password>
+          </div>
+          <div class="input-box">
+            <span class="details"> Confirm Password </span>
+            <pv-password style="width: 100%" v-model="password1" placeholder="Confirm your Password">
+              <template #header>
+                <h6>Pick a password</h6>
+              </template>
+              <template #footer="sp">
+                {{ sp.level }}
+                <pv-divider/>
+                <p class="mt-2">Suggestions</p>
+                <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                  <li>At least one lowercase</li>
+                  <li>At least one uppercase</li>
+                  <li>At least one numeric</li>
+                  <li>Minimum 8 characters</li>
+                </ul>
+              </template>
+            </pv-password>
+          </div>
+        </div>
+        </div>
+      <div class="TypeUser">
+        <span class="details"> Type User :  </span>
+        <pv-select-button  v-model="typeUser" :options="optionsUser" aria-labelledby="single"/>
+      </div>
+
+      <div class="button">
+        <router-link to="/sign-in">
+          <pv-button  style="width: 100%" label="Submit" @click="addNewUser"/>
+        </router-link>
+      </div>
+
+
+    </form>
+
+  </div>
+  </body>
 </template>
 
 <script>
-export default {
+import {AuthenticationApiService} from "@/security/services/authentication-api.service";
 
-};
+export default {
+  name: "sign-up.component",
+  data() {
+    return {
+      typeUser: 'Store',
+      optionsUser: ['Store', 'Supplier'],
+      password: null,
+      password1: null,
+      supplier:{},
+      authenticationService: null,
+      store:{},
+    }
+  },
+  created() {
+    this.authenticationService = new AuthenticationApiService();
+
+  },
+  methods: {
+
+    addNewUser() {
+      if ( this.typeUser == 'Supplier'){
+        this.authenticationService
+            .signUpSupplier( this.supplier)
+      }else{
+        this.authenticationService
+            .signUpStore( this.store)
+      }
+
+    },
+
+
+    },
+}
+
+
+
 </script>
 
 <style scoped>
-.p-button {
-  margin-right: .5rem;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
 }
 
-.p-buttonset {
-  .p-button {
-    margin-right: 0;
-  }
-}
+body {
 
-.sizes {
-  .button {
-    margin-bottom: .5rem;
-    display: block;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .p-button {
-    margin-bottom: .5rem;
-
-    &:not(.p-button-icon-only) {
-      display: flex;
-      width: 100%;
-    }
-  }
-
-  .p-buttonset {
-    .p-button {
-      margin-bottom: 0;
-    }
-  }
-}
-.card{
+  display: flex;
+  height: 100vh;
   justify-content: center;
-  size: auto;
-  text-align: center;
+  align-items: center;
+  background-image: url("https://cdn.shopify.com/s/files/1/0070/7032/files/moving-boxes-warehouse.jpg?v=1634221970&width=1024");
+
+  background-size: 100%;
+
+  opacity: 0.9;
 }
-.field-radiobutton{
-  display:flex;
-  justify-content: center;
-  text-align: center;
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: -moz-linear-gradient(135deg, black, white);
+}
+
+.container form .user-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .user-detail .input-box {
+  width: calc(100% / 2 - 20px);
+}
+
+form .TypeUser {
+  display: flex;
+  position: relative;
+  margin: 14px 0;
 }
 
 
