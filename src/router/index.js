@@ -29,6 +29,16 @@ const router = createRouter({
       name: "home-store",
       component: ()=>import('../store/pages/home-store.component.vue'),
     },
+    {
+      path: "/profile-supplier",
+      name: "profile-supplier",
+      component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+    },
+    {
+      path: "/supplier-profile-edit",
+      name: "supplier-profile-edit",
+      component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
+    },
   ]
 })
 

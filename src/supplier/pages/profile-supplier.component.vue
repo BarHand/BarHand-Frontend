@@ -15,7 +15,7 @@
         <h3 style="margin: 0;color: forestgreen">"{{supplier.name}}  {{supplier.lastName}}"</h3>
         <p>"{{supplier.description}}"</p>
         <p>Address:{{supplier.address}}</p> <p>Phone:{{supplier.phone}}</p>
-            <router-link to="profile-edit">
+            <router-link to="supplier-profile-edit">
             <pv-button id="button" label="Edit" />
           </router-link>
           </span>
