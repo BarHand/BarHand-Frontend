@@ -1,20 +1,43 @@
 
 
 <template>
-  <div class="card">
-    <h5>Login to BarHand</h5>
-    <div class="field">
-      <label for="Email">Email</label>
-      <input id="Email" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
+  <body>
+  <img src="https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg" alt="">
+  <div class="container">
+    <div class="card">
+      <h1>Hello</h1>
+      <h5>Welcome to Barhand</h5>
+      <div class="grid">
+        <div class="col-5 flex align-items-center justify-content-center">
+          <div class="p-fluid">
+            <div class="field">
+              <label for="username">Username</label>
+              <pv-input-text id="username" type="text" />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <pv-input-text id="password" type="password" />
+            </div>
+            <RouterLink to="/about">
+            <pv-button label="Login"></pv-button>
+            </RouterLink>
+          </div>
+        </div>
+        <div class="col-2">
+          <pv-divider layout="vertical">
+            <b>OR</b>
+          </pv-divider>
+        </div>
+        <div class="col-5 flex align-items-center justify-content-center">
+          <RouterLink to="/sign-up">
+          <pv-button label="Sign Up" icon="pi pi-user-plus" class="p-button-success"></pv-button>
+          </RouterLink>
+        </div>
+      </div>
     </div>
-    <div class="field">
-      <label for="password1">Password</label>
-      <input id="password1" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-4">
-    </div>
-    <router-link to="/about">
-    <pv-button label="Login" />
-    </router-link>
   </div>
+  </body>
+
 
 </template>
 
@@ -25,53 +48,32 @@ export default {
 </script>
 
 <style scoped>
-.p-button {
-  margin-right: .5rem;
-}
-
-.p-buttonset {
-.p-button {
-  margin-right: 0;
-}
-}
-
-.sizes {
-.button {
-  margin-bottom: .5rem;
-  display: block;
-
-&:last-child {
-   margin-bottom: 0;
- }
-}
-}
-
-@media screen and (max-width: 640px) {
-  .p-button {
-    margin-bottom: .5rem;
-
-&:not(.p-button-icon-only) {
-   display: flex;
-   width: 100%;
- }
-}
-
-.p-buttonset {
-.p-button {
-  margin-bottom: 0;
-}
-}
+.container{
+  background: #EEE;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
 }
 .card{
-  justify-content: center;
-  size: auto;
+  background-color: #afbaca;
+  width: 50rem;
   text-align: center;
-}
-.field-radiobutton{
-  display:flex;
-  justify-content: center;
-  text-align: center;
-}
+  vertical-align: center;
+  border:3px solid #afbaca;
+  border-radius:22px;
+  opacity:0.9;
+  top: 10%;
+  position: absolute;
 
+}
+img{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0.9;
+
+}
 
 </style>
