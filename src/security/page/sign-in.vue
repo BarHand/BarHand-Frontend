@@ -2,11 +2,14 @@
 
 <template>
   <body>
-  <img src="https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg" alt="">
+  <div >
+    <img src="https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg" alt="">
+  </div>
+
   <div class="container">
     <div class="card">
-      <h1>Hello</h1>
-      <h5>Welcome to Barhand</h5>
+      <h1 class="font-light ">Hello</h1>
+      <h2 class="font-light">Welcome to Barhand</h2>
       <div class="grid">
         <div class="col-5 flex align-items-center justify-content-center">
           <div class="p-fluid">
@@ -25,7 +28,7 @@
         </div>
         <div class="col-2">
           <pv-divider layout="vertical">
-            <b>OR</b>
+            <b class="text-black-alpha-80">OR</b>
           </pv-divider>
         </div>
         <div class="col-5 flex align-items-center justify-content-center">
@@ -55,16 +58,17 @@ export default {
   justify-content: center;
   height: 100%;
 }
+
 .card{
-  background-color: #afbaca;
+  background-color: #212121;
   width: 50rem;
   text-align: center;
   vertical-align: center;
-  border:3px solid #afbaca;
+  border:3px solid #212121;
   border-radius:22px;
-  opacity:0.9;
-  top: 10%;
-  position: absolute;
+  opacity:0.95;
+  bottom: 10%;
+  position: center;
 
 }
 img{
@@ -75,5 +79,13 @@ img{
   opacity: 0.9;
 
 }
-
+h1{
+  color: #EEEEEE;
+}
+h2{
+  color: #EEEEEE;
+}
+label{
+  color: #EEEEEE;
+}
 </style>
