@@ -2,7 +2,7 @@
   <div class="profile">
     <div class="background" style="height: 100vh; margin: 0;padding: 0">
     <div id="sup">
-      <img
+      <img class="image-profile"
           :src="this.supplier.image"
 
 
@@ -15,7 +15,7 @@
         <h3 style="margin: 0;color: forestgreen">"{{supplier.name}}  {{supplier.lastName}}"</h3>
         <p>"{{supplier.description}}"</p>
         <p>Address:{{supplier.address}}</p> <p>Phone:{{supplier.phone}}</p>
-            <router-link to="supplier-profile-edit">
+              <router-link :to="{ name: 'supplier-profile-edit', id}">
             <pv-button id="button" label="Edit" />
           </router-link>
           </span>
@@ -58,13 +58,14 @@
 
 import {SuppliersApiService} from "../services/suppliers-api.service";
 import {ProductsApiService} from "../services/products-api.service";
+import {useRoute} from "vue-router";
 
 
 export default {
   name: "profile-supplier.component",
-
   data() {
     return {
+      id:null,
       supplier: null,
       supplierService: null,
       products: null,
@@ -90,12 +91,16 @@ export default {
     }
   },
   created() {
+    const route= useRoute();
+    this.id = route.params.id;
+
+    console.log(this.id)
     this.supplierService = new SuppliersApiService();
-    this.supplierService.getById(1).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
+    this.supplierService.getById(this.id).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
       this.supplier = response.data;
     });
     this.productService= new ProductsApiService();
-    this.productService.findBySupplierID(1).then((response) => {
+    this.productService.findBySupplierID(this.id).then((response) => {
       this.products = response.data;
     })
   },
@@ -106,7 +111,7 @@ export default {
 
 <style lang="scss" scoped>
 .background{
-  background:powderblue;
+  background-color: #afbaca;
 }
 #sup {
   display: flex;
@@ -115,7 +120,7 @@ export default {
   align-items: center;
 }
 #sup img {
-  width:500px;
+  max-width:500px;
   position:relative;
   top:0px;
   left:150px;
