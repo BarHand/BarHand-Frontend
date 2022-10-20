@@ -1,5 +1,6 @@
 <template>
-  <pv-card style="width: 55%; margin-bottom: 2em; background-color: #afbaca">
+  <h1>BarHand Chat</h1>
+  <pv-card style="width: 40%; margin-bottom: 2em; background-color: #afbaca; margin: 0 auto">
     <template #title>
       <div v-if="!joined" class="parent-container">
         <div class="name-container">
@@ -21,13 +22,10 @@
           <pv-text-area
               v-model="text"
               class="text-message"
-              v-on:keyup.enter="sendMessage" style="width: 50%"
+              v-on:keyup.enter="sendMessage" style="width: 37%"
           ></pv-text-area>
         </div>
       </div>
-    </template>
-    <template #text>
-
     </template>
   </pv-card>
 </template>
@@ -71,6 +69,9 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  text-align: center;
+}
 p {
   line-height: 1.5;
   margin: 0;
@@ -103,12 +104,12 @@ p {
   font-size: 20px;
 }
 .text-input-container {
-  height: 65vh;
+  height: 80vh;
   bottom: 15px;
 
 }
 .text-message {
-  width: 50%;
+  width: 40%;
   bottom: 0px;
   height: 70px;
   padding: 10px;
