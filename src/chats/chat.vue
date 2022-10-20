@@ -1,30 +1,36 @@
 <template>
-  <div v-if="!joined" class="parent-container">
-    <div class="name-container">
-      <labe>Username</labe>
-      <input type="text" class="user-name" v-model="currentUser" />
-      <button class="join-button" v-on:click="join">Join</button>
-    </div>
-  </div>
-  <div v-if="joined">
-    <div class="list-container">
-      <div v-for="message in messages" :key="message.id">
-        <b>
-          {{ message.user }}
-        </b>
-        : {{ message.text }}
+  <pv-card style="width: 55%; margin-bottom: 2em; background-color: #afbaca">
+    <template #title>
+      <div v-if="!joined" class="parent-container">
+        <div class="name-container">
+          <labe>Username</labe>
+          <input type="text" class="user-name" v-model="currentUser" />
+          <pv-button class="join-button" v-on:click="join">Join</pv-button>
+        </div>
       </div>
-    </div>
-    <div class="text-input-container">
-      <textarea
-          v-model="text"
-          class="text-message"
-          v-on:keyup.enter="sendMessage"
-      ></textarea>
-    </div>
-  </div>
-</template>
+      <div v-if="joined">
+        <div class="list-container">
+          <div v-for="message in messages" :key="message.id">
+            <b>
+              {{ message.user }}
+            </b>
+            : {{ message.text }}
+          </div>
+        </div>
+        <div class="text-input-container">
+          <pv-text-area
+              v-model="text"
+              class="text-message"
+              v-on:keyup.enter="sendMessage" style="width: 50%"
+          ></pv-text-area>
+        </div>
+      </div>
+    </template>
+    <template #text>
 
+    </template>
+  </pv-card>
+</template>
 <script>
 import io from "socket.io-client";
 export default {
@@ -65,12 +71,16 @@ export default {
 </script>
 
 <style scoped>
+p {
+  line-height: 1.5;
+  margin: 0;
+  position:absolute;
+}
 .parent-container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  position: fixed;
   padding-top: 150px;
   background-color: #afbaca;
 
@@ -93,15 +103,17 @@ export default {
   font-size: 20px;
 }
 .text-input-container {
-  height: 100vh;
+  height: 65vh;
+  bottom: 15px;
+
 }
 .text-message {
-  width: 100%;
-  position: absolute;
+  width: 50%;
   bottom: 0px;
   height: 70px;
   padding: 10px;
   box-sizing: border-box;
-  background-color: #afbaca;
+  background-color: white;
+  position: absolute;
 }
 </style>
