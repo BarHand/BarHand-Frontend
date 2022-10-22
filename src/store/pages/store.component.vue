@@ -10,15 +10,6 @@ export default {
   name: "store.component",
   components:{
     TheNavigation
-  },
-  data(){
-    return{};
-  },
-  props:{
-    id:{
-      type:Number,
-      required:true,
-    }
   }
 }
 </script>

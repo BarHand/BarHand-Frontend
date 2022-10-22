@@ -22,40 +22,26 @@ const router = createRouter({
       component: ()=>import('../security/page/sign-in.vue'),
     },
     {
-      path: "/store/:id",
+      path: "/store/:sId",
       name: "store",
       component: ()=>import('../store/pages/store.component.vue'),
+      props:true,
       children:[
         {
-          path: "store-home",
+          path: "/store-home",
           name: "store-home",
           component: ()=>import('../store/pages/store-home.component.vue'),
         },
         {
-          path: "sProfile",
+          path: "/store-profile",
           name: "store-profile",
-          component: ()=>import('../store/pages/store-profile.component.vue'),
+          component: ()=>import('../store/pages/store-profile.vue'),
         },
         {
-          path: "store-orders",
+          path: "/store-orders",
           name: "store-orders",
           component: ()=>import('../store/pages/store-orders.vue'),
         },
-        {
-          path: "sProfile-edit",
-          name: "store-profile-edit",
-          component: ()=>import('../store/pages/store-profile-edit.component.vue'),
-        },
-        {
-          path: "product-view/:pId",
-          name: "product-view",
-          component: ()=>import('../inventory/pages/product-view-store.vue'),
-        },
-        {
-          path: "view-supplier-profile/:sId",
-          name: "view-supplier-profile",
-          component: ()=>import('../store/pages/view-profile-supplier.component.vue'),
-        }
       ]
     },
 
@@ -65,17 +51,20 @@ const router = createRouter({
       component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
     },
     {
-      path: "/inventory",
-      name: "view-inventory",
-      component: ()=>import('../inventory/pages/view-inventory.vue'),
-    },
-    {
-      path: "/supplier-profile-edit",
+      path: "/supplier-profile-edit/:id",
       name: "supplier-profile-edit",
       component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
     },
-
-
+    {
+      path: "/edit/:id",
+      name: "edit",
+      component: ()=>import('../store/pages/store-supplier-edit.component.vue'),
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: ()=>import('../store/pages/store-supplier-add.component.vue'),
+    },
 
   ]
 })

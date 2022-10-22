@@ -3,7 +3,7 @@
     {
       "storeName": "Mass SuperMarket",
       "name": "Josue",
-      "lastName": "Vilchezs",
+      "lastName": "Vilchez",
       "email": "j.vil@gmail.com",
       "address": "Street Bolivar 257",
       "phone": "987883513",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "storeName": "Los Inkas Market12",
+      "storeName": "Los Inkas Market",
       "name": "Thomas",
       "lastName": "Campoy",
       "email": "thom_23@gmail.com",
@@ -34,16 +34,10 @@
       "image": "https://lh3.googleusercontent.com/p/AF1QipNt9I29nejQIqrYNJSNNg3M5Oo6Tqih1uQreXH1=w1080-h608-p-k-no-v0"
     },
     {
-      "name": "De La Mar",
-      "lastName": "Zurita",
-      "businessName": "Frito lays",
-      "email": "u201521128@upc.edu.pe",
-      "password": "123ABCd.",
-      "id": 4,
-      "storeName": "Lola",
-      "phone": "99132262",
-      "address": "delamarzp",
-      "image": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg"
+      "id": 4
+    },
+    {
+      "id": 5
     }
   ],
   "suppliers": [
@@ -59,8 +53,7 @@
       "description": "San Joel Drinks Company is a Peruvian company that owns several supermarket chains. It began operations in 2004",
       "phone": "93132881233",
       "password": "diego.100",
-      "id": 1,
-      "rating": 4
+      "id": 1
     },
     {
       "supplierName": "Good Items Corp",
@@ -74,8 +67,7 @@
       "description": "Good Items Corp is a Peruvian company that sells multiple technology products. It began operations in 2016",
       "phone": "976067993",
       "password": "kamptec1",
-      "id": 2,
-      "rating": 4
+      "id": 2
     },
     {
       "id": 3,
@@ -89,8 +81,7 @@
       "category": "Food",
       "description": "venta de abarrotes y golosinas",
       "phone": "976849521",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 4,
@@ -104,8 +95,7 @@
       "category": "Grocery ",
       "description": "sale of groceries and products in general",
       "phone": "989756214",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 5,
@@ -119,8 +109,7 @@
       "category": "Food and Beverage",
       "description": "sale of food and soft drinks in general",
       "phone": "999564213",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 6,
@@ -134,8 +123,7 @@
       "category": "Grocery and drinks",
       "description": "It offers its customers sales of all kinds of groceries, soft drinks",
       "phone": "987954846",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 7,
@@ -149,8 +137,7 @@
       "category": "Grocery and sweets",
       "description": "sale of groceries and sweets",
       "phone": "987954623",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 8,
@@ -164,8 +151,7 @@
       "category": "Candys and Canned food",
       "description": "We offer sale of candies and canned food at the best prices",
       "phone": "985642135",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 9,
@@ -179,8 +165,7 @@
       "category": "Canned food",
       "description": "\nWe offer sale of canned food, such as tuna, beans, with the best deals and at the best prices",
       "phone": "985462878",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     },
     {
       "id": 10,
@@ -194,21 +179,18 @@
       "category": "Food and beverage",
       "description": "We offer sale of beans, cereals, soft drinks, dairy products, at excellent prices",
       "phone": "939356287",
-      "password": "123456789",
-      "rating": 4
+      "password": "123456789"
     }
   ],
   "products": [
     {
       "name": "Chicha Morada Drink",
       "category": "Food and Beverage",
-      "image": "https://www.tienda-peruana.com/3252-tm_home_default/concentrado-de-chicha-morada-valle-fertil-1l.jpg",
-      "available": false,
+      "image": "https://s3.amazonaws.com/bsalemarket/39452/product/AGU390CHIdefault.jpg",
+      "available": true,
       "description": "Purple corn drink (600 ml)",
       "id": 1,
-      "supplierID": 1,
-      "rating": 1,
-      "price": 15
+      "supplierID": 1
     },
     {
       "name": "Cola KR Soda",
@@ -217,9 +199,7 @@
       "available": true,
       "description": "Orange flavoured soda (600 ml)",
       "id": 2,
-      "supplierID": 1,
-      "rating": 3,
-      "price": 65
+      "supplierID": 1
     },
     {
       "name": "JBL Speaker",
@@ -228,9 +208,7 @@
       "available": true,
       "description": "Wireless bluetooth JBL speaker",
       "id": 3,
-      "supplierID": 2,
-      "rating": 2,
-      "price": 65
+      "supplierID": 2
     },
     {
       "name": "Dron XTX",
@@ -239,9 +217,7 @@
       "available": true,
       "description": "Cool flying robot ",
       "id": 4,
-      "supplierID": 2,
-      "rating": 3,
-      "price": 15
+      "supplierID": 2
     },
     {
       "name": "Primor oil",
@@ -250,9 +226,7 @@
       "available": true,
       "description": "Quality oil for your health care",
       "id": 5,
-      "supplierID": 3,
-      "rating": 1,
-      "price": 15
+      "supplierID": 3
     },
     {
       "name": "Mazola oil",
@@ -261,9 +235,7 @@
       "available": true,
       "description": "Low in saturated fat",
       "id": 6,
-      "supplierID": 3,
-      "rating": 2,
-      "price": 15
+      "supplierID": 3
     },
     {
       "name": "Beats headphones",
@@ -272,9 +244,7 @@
       "available": true,
       "description": "wireless headphones",
       "id": 7,
-      "supplierID": 2,
-      "rating": 1,
-      "price": 18
+      "supplierID": 2
     },
     {
       "name": "Frutaris Drink",
@@ -283,42 +253,34 @@
       "available": true,
       "description": "Citrus fruit flavor (500 ml)",
       "id": 8,
-      "supplierID": 1,
-      "rating": 4,
-      "price": 17
+      "supplierID": 1
     },
     {
       "name": "Sprite soda",
       "category": "Food and Beverage",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi7WHVXaLL4sYCChP2RCVX0tWBxrbszlMmYQ&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "Lemon-lime flavor (600 ml)",
       "id": 9,
-      "supplierID": 1,
-      "rating": 3,
-      "price": 11
+      "supplierID": 1
     },
     {
       "name": "Pepsi soda",
       "category": "Food and Beverage",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLMMkFj60A46ha_4xoo84m8REuXM-Cq_vk-A&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "sugary drink and cola (500 ml)",
       "id": 10,
-      "supplierID": 1,
-      "rating": 1,
-      "price": 13
+      "supplierID": 1
     },
     {
       "name": "Atun Campomar",
       "category": "Canned Food",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7uL1-_CMfUBsvsxb0PZKngvIAfHpNsE_ng&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "Campomar tuna chunks in vegetable oil (170gr can)",
       "id": 11,
-      "supplierID": 10,
-      "rating": 5,
-      "price": 18
+      "supplierID": 10
     },
     {
       "name": "Atun Florida",
@@ -327,9 +289,7 @@
       "available": true,
       "description": "Florida tuna fillet in vegetable oil(170gr can)",
       "id": 12,
-      "supplierID": 10,
-      "rating": 4,
-      "price": 19
+      "supplierID": 10
     },
     {
       "name": "Atun Fannys",
@@ -338,9 +298,7 @@
       "available": true,
       "description": "Fannys tuna fillet in vegetable oil (170gr can)",
       "id": 13,
-      "supplierID": 10,
-      "rating": 2,
-      "price": 17
+      "supplierID": 10
     },
     {
       "name": "Atun Primor",
@@ -349,20 +307,16 @@
       "available": true,
       "description": "Primor tuna fillet in vegetable oil (170gr can)",
       "id": 14,
-      "supplierID": 10,
-      "rating": 4,
-      "price": 14
+      "supplierID": 10
     },
     {
       "name": "Atun Gloria",
       "category": "Canned Food",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUIjbrch8UgLVNA7tfVoGzPqzGiUG1PZZ7LA&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "Gloria tuna chunks in vegetable oil (170gr can)",
       "id": 15,
-      "supplierID": 9,
-      "rating": 2,
-      "price": 15
+      "supplierID": 9
     },
     {
       "name": "Milk Gloria",
@@ -371,9 +325,7 @@
       "available": true,
       "description": "Gloria Blue Milk 400 g - Can 400 g",
       "id": 16,
-      "supplierID": 20,
-      "rating": 3,
-      "price": 15
+      "supplierID": 10
     },
     {
       "name": "Milk Aro",
@@ -382,20 +334,16 @@
       "available": true,
       "description": "Aro Milk 400 g with vitamin D - Can 400 g",
       "id": 17,
-      "supplierID": 10,
-      "rating": 5,
-      "price": 17
+      "supplierID": 10
     },
     {
       "name": "Milk Ideal",
       "category": "Canned Food",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_XoExeinnplolYB3HgVwbP8MT4R0rpRMJkg&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "Ideal Milk- Can 400 g",
       "id": 18,
-      "supplierID": 9,
-      "rating": 3,
-      "price": 8
+      "supplierID": 9
     },
     {
       "name": "\ncasino cookie",
@@ -404,9 +352,7 @@
       "available": true,
       "description": "vanilla cookie filled with chocolate flavor",
       "id": 19,
-      "supplierID": 8,
-      "rating": 5,
-      "price": 10
+      "supplierID": 8
     },
     {
       "name": "\ncasino cookie",
@@ -415,20 +361,16 @@
       "available": true,
       "description": "vanilla cookie filled with mint flavor",
       "id": 20,
-      "supplierID": 8,
-      "rating": 4,
-      "price": 10
+      "supplierID": 8
     },
     {
       "name": "Potato lays",
       "category": "Candy",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk9rcLGayrjv4slh4kkZuQvl2eLlFwl7nCzA&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "French fries flakes",
       "id": 21,
-      "supplierID": 8,
-      "rating": 4,
-      "price": 15
+      "supplierID": 8
     },
     {
       "name": "Doritos Snacks",
@@ -437,9 +379,7 @@
       "available": true,
       "description": "Corn Chips cheese",
       "id": 22,
-      "supplierID": 8,
-      "rating": 3,
-      "price": 15
+      "supplierID": 8
     },
     {
       "name": "Costeño Rice",
@@ -448,20 +388,16 @@
       "available": true,
       "description": "750 gr bag of rice",
       "id": 23,
-      "supplierID": 10,
-      "rating": 4,
-      "price": 15
+      "supplierID": 10
     },
     {
       "name": "Costeño Rice",
       "category": "Food",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgzuULLqfbYdYrJ2mbZd9bXh3jjT0T0sSzbw&usqp=CAU",
-      "available": false,
+      "available": true,
       "description": "750 gr bag of rice",
       "id": 24,
-      "supplierID": 7,
-      "rating": 5,
-      "price": 15
+      "supplierID": 7
     },
     {
       "name": "Caisy Rice",
@@ -470,9 +406,7 @@
       "available": true,
       "description": "1000 gr bag of rice",
       "id": 25,
-      "supplierID": 7,
-      "rating": 1,
-      "price": 15
+      "supplierID": 7
     },
     {
       "name": "Dulfina sugar",
@@ -481,9 +415,7 @@
       "available": true,
       "description": "1000 gr bag of sugar",
       "id": 26,
-      "supplierID": 6,
-      "rating": 4,
-      "price": 15
+      "supplierID": 6
     },
     {
       "name": "Sulga sugar",
@@ -492,9 +424,7 @@
       "available": true,
       "description": "1000 gr bag of sugar",
       "id": 27,
-      "supplierID": 6,
-      "rating": 5,
-      "price": 15
+      "supplierID": 6
     },
     {
       "name": "Paisana menestras",
@@ -503,9 +433,7 @@
       "available": true,
       "description": "Split peas in 1 kg bag",
       "id": 28,
-      "supplierID": 6,
-      "rating": 2,
-      "price": 15
+      "supplierID": 6
     },
     {
       "name": "Inka Grains",
@@ -514,9 +442,7 @@
       "available": true,
       "description": "\nlentils in 1 kg bag",
       "id": 29,
-      "supplierID": 6,
-      "rating": 1,
-      "price": 15
+      "supplierID": 6
     },
     {
       "name": "Inka Trail",
@@ -525,9 +451,7 @@
       "available": true,
       "description": "Canary bean in bolda of 1 kg",
       "id": 30,
-      "supplierID": 7,
-      "rating": 5,
-      "price": 15
+      "supplierID": 7
     },
     {
       "name": "San luis water",
@@ -536,9 +460,7 @@
       "available": true,
       "description": "600ml bottled water",
       "id": 31,
-      "supplierID": 4,
-      "rating": 3,
-      "price": 15
+      "supplierID": 4
     },
     {
       "name": "San Mateo water",
@@ -547,9 +469,7 @@
       "available": true,
       "description": "600ml bottled water",
       "id": 32,
-      "supplierID": 4,
-      "rating": 5,
-      "price": 15
+      "supplierID": 4
     },
     {
       "name": "\nNoodles Don Vittorio",
@@ -558,9 +478,7 @@
       "available": true,
       "description": "Spaghetti bag 1kg",
       "id": 33,
-      "supplierID": 5,
-      "rating": 5,
-      "price": 15
+      "supplierID": 5
     },
     {
       "name": "Molitalia spaghetti",
@@ -569,9 +487,7 @@
       "available": true,
       "description": "Spaghetti bag 1kg",
       "id": 34,
-      "supplierID": 5,
-      "rating": 4,
-      "price": 15
+      "supplierID": 5
     },
     {
       "name": "Noodles Lavaggi",
@@ -580,9 +496,7 @@
       "available": true,
       "description": "Noodles bag 500gr",
       "id": 35,
-      "supplierID": 5,
-      "rating": 5,
-      "price": 15
+      "supplierID": 5
     },
     {
       "name": "Facundo beans",
@@ -591,9 +505,7 @@
       "available": true,
       "description": "\ncanned lentils",
       "id": 36,
-      "supplierID": 9,
-      "rating": 5,
-      "price": 15
+      "supplierID": 9
     },
     {
       "name": "Santys",
@@ -602,9 +514,7 @@
       "available": true,
       "description": "\ncanned mushrooms",
       "id": 37,
-      "supplierID": 9,
-      "rating": 4,
-      "price": 15
+      "supplierID": 9
     }
   ]
 }
