@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import navbar from "@/views/navbar.vue";
+import navbar from "@/views/TheNavigation.vue";
 import {ProductsApiService} from "@/supplier/services/products-api.service";
 
 export default {

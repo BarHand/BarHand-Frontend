@@ -1,5 +1,4 @@
 <template>
-  <RouterView></RouterView>
   <div class="home">
     <div class="background" style="height: 100vh; margin: 0;padding: 0">
       <div class="header">
@@ -36,6 +35,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <style scoped>
@@ -132,14 +132,8 @@
 </style>
 
 <script>
-// @ is an alias to /src
-
-
-
 export default {
   name: 'HomeView',
-  components: {
 
-  },
 };
 </script>

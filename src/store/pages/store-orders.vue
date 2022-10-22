@@ -1,11 +1,10 @@
 <template>
-  <RouterView />
+<h1>page orders</h1>
 </template>
 
-<script >
+<script>
 export default {
-  name:'app',
-
+  name: "store-orders"
 }
 </script>
 
