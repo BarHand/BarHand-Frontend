@@ -9,26 +9,42 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-      path: '/about',
-      name: 'navbar',
-      component: () => import('../views/navbar.vue')
-    },
+
     {
       path: "/sign-up",
       name: "sign-up",
       component: ()=>import('../security/page/sign-up.vue'),
     },
+
     {
       path: "/sign-in",
       name: "sign-in",
       component: ()=>import('../security/page/sign-in.vue'),
     },
     {
-      path: "/home-store",
-      name: "home-store",
-      component: ()=>import('../store/pages/home-store.component.vue'),
+      path: "/store/:sId",
+      name: "store",
+      component: ()=>import('../store/pages/store.component.vue'),
+      props:true,
+      children:[
+        {
+          path: "/store-home",
+          name: "store-home",
+          component: ()=>import('../store/pages/store-home.component.vue'),
+        },
+        {
+          path: "/store-profile",
+          name: "store-profile",
+          component: ()=>import('../store/pages/store-profile.vue'),
+        },
+        {
+          path: "/store-orders",
+          name: "store-orders",
+          component: ()=>import('../store/pages/store-orders.vue'),
+        },
+      ]
     },
+
     {
       path: "/profile-supplier/:id",
       name: "profile-supplier",
