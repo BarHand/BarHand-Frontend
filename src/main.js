@@ -39,8 +39,6 @@ import Dropdown from "primevue/dropdown";
 import Checkbox from "primevue/checkbox";
 import DialogService from "primevue/dialogservice";
 import ConfirmationService from "primevue/confirmationservice";
-import Rating from "primevue/rating";
-import DataViewLayoutOptions from "primevue/dataviewlayoutoptions";
 
 
 
@@ -74,8 +72,6 @@ app.component('pv-image', Image)
 app.component('pv-calendar',Calendar)
 app.component('pv-drop-down',Dropdown)
 app.component('pv-checkbox',Checkbox)
-app.component('pv-rating',Rating)
-app.component('pv-dataViewLayoutOption', DataViewLayoutOptions)
 
 
 
