@@ -34,6 +34,11 @@ import Password from "primevue/password";
 import SelectButton from "primevue/selectbutton";
 import Textarea from "primevue/textarea";
 import Image from "primevue/image";
+import Calendar from "primevue/calendar";
+import Dropdown from "primevue/dropdown";
+import Checkbox from "primevue/checkbox";
+import DialogService from "primevue/dialogservice";
+import ConfirmationService from "primevue/confirmationservice";
 
 
 
@@ -43,7 +48,10 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(PrimeVue,{ripple:true})
+app.use(ConfirmationService);
 app.use(ToastService);
+app.use(DialogService);
+
 // PrimeVue Component
 app.component("pv-button",Button)
 app.component("pv-input-text",InputText)
@@ -59,8 +67,11 @@ app.component('pv-dialog', Dialog)
 app.component('pv-password',Password)
 app.component('pv-select-button',SelectButton)
 app.component('pv-text-area', Textarea)
-
+app.component('pv-password',Password)
 app.component('pv-image', Image)
+app.component('pv-calendar',Calendar)
+app.component('pv-drop-down',Dropdown)
+app.component('pv-checkbox',Checkbox)
 
 
 
