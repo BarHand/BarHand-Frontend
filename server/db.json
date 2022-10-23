@@ -34,10 +34,12 @@
       "image": "https://lh3.googleusercontent.com/p/AF1QipNt9I29nejQIqrYNJSNNg3M5Oo6Tqih1uQreXH1=w1080-h608-p-k-no-v0"
     },
     {
+      "name": "De La Mar",
+      "lastName": "Zurita",
+      "businessName": "Frito lays",
+      "email": "u201521128@upc.edu.pe",
+      "password": "123ABCd.",
       "id": 4
-    },
-    {
-      "id": 5
     }
   ],
   "suppliers": [
@@ -180,6 +182,30 @@
       "description": "We offer sale of beans, cereals, soft drinks, dairy products, at excellent prices",
       "phone": "939356287",
       "password": "123456789"
+    },
+    {
+      "name": "",
+      "lastName": "",
+      "businessName": "",
+      "email": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "name": "sales_products",
+      "lastName": "Zurita",
+      "businessName": "Frito lays",
+      "email": "100007360323931",
+      "password": "1234Adc.",
+      "id": 12
+    },
+    {
+      "name": "sales_products",
+      "lastName": "Zurita",
+      "businessName": "Frito lays",
+      "email": "delamarzp@gmail.com",
+      "password": "1234Adc.",
+      "id": 13
     }
   ],
   "products": [

@@ -35,13 +35,19 @@ const router = createRouter({
         {
           path: "/store-profile",
           name: "store-profile",
-          component: ()=>import('../store/pages/store-profile.vue'),
+          component: ()=>import('../store/pages/store-profile.component.vue'),
         },
         {
           path: "/store-orders",
           name: "store-orders",
           component: ()=>import('../store/pages/store-orders.vue'),
         },
+        {
+          path: "/store-profile-edit",
+          name: "store-profile-edit",
+          component: ()=>import('../store/pages/store-profile-edit.component.vue'),
+        },
+
       ]
     },
 
