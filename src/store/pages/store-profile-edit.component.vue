@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <pv-card >
+    <pv-card style="width: 30em">
       <template #header>
         <img :src="this.imgOld" alt="" style="height: 15rem"/>
       </template>
@@ -72,7 +72,6 @@
 
 <script>
 import {StoresApiService} from "@/store/services/stores-api.service";
-import {useRoute} from "vue-router";
 
 export default {
   name: "store-profile-edit",
@@ -86,8 +85,8 @@ export default {
     }
   },
   created() {
-    const route= useRoute();
-    this.id = route.params.id;
+    //const route= useRoute();
+    this.id = 1;//route.params.id;
 
     //console.log(this.id)
     this.storeService = new StoresApiService();
@@ -103,22 +102,18 @@ export default {
       this.storeService = new StoresApiService();
       this.storeService.update(this.id, this.store).then((response) => {
       });
-     this.$router.push({name: 'store-profile'}); //redirect
+     this.$router.push({path: '../store-profile'}); //redirect
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-
-  .p-card {
-    width: 30em;
-
-  }
+  /*background-color: #9acb3c;*/
 }
 </style>
