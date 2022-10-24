@@ -72,6 +72,7 @@
 
 <script>
 import {StoresApiService} from "@/store/services/stores-api.service";
+import {useRoute} from "vue-router";
 
 export default {
   name: "store-profile-edit",
@@ -85,8 +86,8 @@ export default {
     }
   },
   created() {
-    //const route= useRoute();
-    this.id = 1;//route.params.id;
+    const route= useRoute();
+    this.id = route.params.id;
 
     //console.log(this.id)
     this.storeService = new StoresApiService();
@@ -102,7 +103,7 @@ export default {
       this.storeService = new StoresApiService();
       this.storeService.update(this.id, this.store).then((response) => {
       });
-     this.$router.push({path: '../store-profile'}); //redirect
+     this.$router.push({path: './store-profile'}); //redirect
     }
   }
 }

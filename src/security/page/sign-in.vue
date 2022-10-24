@@ -1,97 +1,142 @@
-
 <template>
-  <body>
-  <div class="container">
-    <div class="card">
-      <h1 class="font-light ">Hello</h1>
-      <h2 class="font-light">Welcome to Barhand</h2>
-      <div class="grid">
-        <div class="col-5 flex align-items-center justify-content-center">
-          <div class="p-fluid">
-            <div class="field">
-              <label for="username">Username</label>
-              <pv-input-text id="username" type="text" />
-            </div>
-            <div class="field">
-              <label for="password">Password</label>
-              <pv-input-text id="password" type="password" />
-            </div>
-            <div class="field">
-              <span class="details"> Type User :  </span>
-              <pv-select-button  v-model="typeUser" :options="optionsUser" aria-labelledby="single"/>
-            </div>
-            <RouterLink to="/store-home">
-            <pv-button label="Login"></pv-button>
-            </RouterLink>
-          </div>
-        </div>
-        <div class="col-2">
-          <pv-divider layout="vertical">
-            <b class="text-black-alpha-80">OR</b>
-          </pv-divider>
-        </div>
+  <body >
+  <div class="flex">
+    <pv-card style="width: 30em">
+      <template #title>
+        <h2 class="font-light">Hello</h2>
+        <label class="font-light">Welcome to Barhand</label>
+      </template>
+      <template #content>
+        <div class="p-fluid grid">
+          <div class="field col-12 md:col-5">
+              <div class="p-fluid">
+                <div class="field">
+                  <label for="username">Username</label>
+                  <pv-input-text style="height: 15px;" id="username" type="text" v-model="this.userName"/>
+                </div>
+                <div class="field">
+                  <label for="password">Password</label>
+                  <pv-input-text style="height: 15px;" id="password" type="password" v-model="this.password"/>
+                </div>
 
-        <div class="col-5 flex align-items-center justify-content-center">
-          <RouterLink to="/sign-up">
-          <pv-button label="Sign Up" icon="pi pi-user-plus" class="p-button-success"></pv-button>
-          </RouterLink>
+
+
+
+
+                <div class="field">
+                  <span class="details"> Type User :  </span>
+                  <pv-select-button style="height: 25px;" v-model="typeUser" :options="optionsUser"
+                                    aria-labelledby="single"/>
+                </div>
+                <!-- <RouterLink to="/store-home">-->
+                 <pv-button style="height: 30px;"  label="Login" v-on:click="validate()"></pv-button>
+                <!--</RouterLink>-->
+              </div>
+            </div>
+          <div class="field col-12 md:col-2">
+              <pv-divider layout="vertical">
+                <b class="text-black-alpha-80">OR</b>
+              </pv-divider>
+            </div>
+
+          <div class="field col-12 md:col-5">
+             <RouterLink to="/sign-up">
+                 <pv-button label="Sign Up" icon="pi pi-user-plus" class="p-button-success" v-on:keydown="validate()"   > </pv-button>
+               </RouterLink>
+            </div>
+
         </div>
-      </div>
-    </div>
+      </template>
+
+    </pv-card>
+
   </div>
+
   </body>
 
 
 </template>
 
 <script>
+
+
+import {StoresApiService} from "@/store/services/stores-api.service";
+import {SuppliersApiService} from "@/supplier/services/suppliers-api.service";
+
 export default {
   name: "sign-in.component",
+
+
   data() {
     return {
+      id:Number,
+
+      user:{},
+      userName:'',
+      password:'',
       typeUser: 'Store',
       optionsUser: ['Store', 'Supplier'],
+      stores: null,
+      storeService: null,
+      suppliers: null,
+      supplierService: null,
     }
   },
+  created() {
+    this.storeService = new StoresApiService();
+    this.storeService.getAll().then((response) => {
+      this.stores = response.data;
+    });
+    this.supplierService = new SuppliersApiService();
+    this.supplierService.getAll().then((response) => {
+      this.suppliers = response.data;
+    });
+  },
+  methods: {
+
+
+    validate(){
+      if (this.typeUser==="Supplier"){
+        this.user= this.suppliers.filter((supplier)=>{
+          return supplier.name === this.userName
+        });
+        if(this.user.name===this.userName && this.user.password===this.password){
+          this.$router.$push({path: `/supplier/${this.user.id}/store-home`});
+        }
+
+
+      } else if (this.typeUser==="Store"){
+        this.user= this.stores.find(store=>
+           store.name === this.userName && store.password===this.password);
+         this.id=Number(this.user.id);
+         this.$router.push({path: `/store/${this.id}/store-profile`});
+
+
+      }
+
+    },
+
+    toRoute(  ){
+      if(this.typeUser==="Store"){
+        this.$router.push({path: `/store/${this.id}/store-profile`});
+      }
+    }
+  }
 
 };
 </script>
 
 <style scoped>
-* {
 
-  box-sizing: border-box;
-  font-family: "Roboto";
-}
-body{
+.flex {
   display: flex;
-  height: 100vh;
-  justify-content: center;
   align-items: center;
-  background-image: url("https://www.franchisemarket.ph/application/files/2315/8590/1658/wholesale-supplier.jpg");
-  background-size: 100%;
-  opacity: 0.95;
-}
-.container{
-
-  align-items: center;
-  display: flex;
   justify-content: center;
-
+  padding-top: 10px;
+  height: 100%;
 }
-
-.card{
-  background-color: #fff;
-  max-width: 800px;
-  text-align: center;
-  vertical-align: center;
-  border:3px solid #fff;
-  border-radius:22px;
-  opacity:0.95;
-  bottom: 10%;
-  position: center;
-
-}
+body { min-height: 100vh;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(136,59,73,1) 28%, rgba(90,30,158,1) 69%, rgba(58,169,191,1) 98%);}
 
 
 

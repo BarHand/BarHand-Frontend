@@ -39,7 +39,11 @@
       "businessName": "Frito lays",
       "email": "u201521128@upc.edu.pe",
       "password": "123ABCd.",
-      "id": 4
+      "id": 4,
+      "storeName": "Lola",
+      "phone": "99132262",
+      "address": "delamarzp",
+      "image": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg"
     }
   ],
   "suppliers": [
