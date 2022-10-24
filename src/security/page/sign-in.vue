@@ -20,7 +20,7 @@
               <span class="details"> Type User :  </span>
               <pv-select-button  v-model="typeUser" :options="optionsUser" aria-labelledby="single"/>
             </div>
-            <RouterLink to="/about">
+            <RouterLink to="/home-store">
             <pv-button label="Login"></pv-button>
             </RouterLink>
           </div>

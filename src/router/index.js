@@ -40,6 +40,11 @@ const router = createRouter({
       component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
     },
     {
+      path: "/warehouse",
+      name: "warehouse",
+      component: ()=>import('../store/pages/store-supplier.component.vue'),
+    },
+    {
       path: "/edit/:id",
       name: "edit",
       component: ()=>import('../store/pages/store-supplier-edit.component.vue'),

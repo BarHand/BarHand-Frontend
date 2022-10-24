@@ -97,7 +97,6 @@ export default {
 
 
 .page{
-  height: 100vh;
   background-color: #AFBACA;
 }
 

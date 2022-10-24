@@ -19,7 +19,7 @@
       <pv-input-text placeholder="Descripcion" type="text"  v-model="product.description" />
     </template>
     <template #footer>
-      <router-link :to="{ name: 'store'}">
+      <router-link :to="{ name: 'warehouse'}">
         <pv-button  icon="pi pi-times" class="p-button-secondary" label="Cancel"  />
       </router-link >
       <pv-button v-on:click="saveItem()" icon="pi pi-check" label="Save"  />
@@ -53,7 +53,7 @@ export default {
       this.productService = new ProductsApiService();
       this.productService.create(this.product).then((response) => {
       });
-      this.$router.push({path: '/store'}); //redirect
+      this.$router.push({path: '/warehouse'}); //redirect
     }
   }
 }

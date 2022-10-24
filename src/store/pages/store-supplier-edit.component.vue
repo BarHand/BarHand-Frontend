@@ -19,7 +19,7 @@
       <pv-input-text placeholder="Content" type="text" v-model="product.description"  />
     </template>
     <template #footer>
-      <router-link :to="{ name: 'store'}">
+      <router-link :to="{ name: 'warehouse'}">
       <pv-button  icon="pi pi-times" class="p-button-secondary" label="Cancel"  />
       </router-link >
       <pv-button v-on:click="editData" icon="pi pi-check" label="Save"  />

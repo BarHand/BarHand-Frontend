@@ -39,7 +39,7 @@ export default{
         { label: "Mis datos",icon:'pi pi-fw pi-user-edit', to: "/about" },
         { label: "Productos", icon:'pi pi-fw pi-shopping-cart',to: "/about" },
         { label: "Clientes", icon:'pi pi-fw pi-users', to: "/about" },
-        { label: "Almacén", icon:'pi pi-fw pi-box', to: "/store" },
+        { label: "Almacén", icon:'pi pi-fw pi-box', to: "/warehouse" },
 
       ],
       accountMenu: [{
