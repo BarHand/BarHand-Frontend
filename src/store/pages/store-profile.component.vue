@@ -27,20 +27,23 @@
 
 <script>
 import {StoresApiService} from "@/store/services/stores-api.service";
+import {useRoute} from "vue-router";
 
 export default {
   name: "store-profile",
   data() {
     return {
-      id:1,
       store: {},// esta es la manera correcta // nunca poner null
       storeService: null,
+      id: Number,
 
     }
   },
   created() {
-    //const route= useRoute();
-    this.id = 1;//route.params.id;
+    const route= useRoute();
+    this.id = route.params.id;
+
+
 
     //console.log(this.id)
     this.storeService = new StoresApiService();
