@@ -34,6 +34,24 @@
       "image": "https://lh3.googleusercontent.com/p/AF1QipNt9I29nejQIqrYNJSNNg3M5Oo6Tqih1uQreXH1=w1080-h608-p-k-no-v0"
     }
   ],
+  "purchase": [
+    {
+      "dni": "10245569",
+      "phone": "996253158",
+      "provider": "San Joel Drinks Company",
+      "order": "1",
+      "item": " Chicha Morada Drink, Cola KR Soda",
+      "image": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/bi_570/public/media/image/2022/01/ces-2022-2582123.jpg?itok=D5YEuU3R\","
+    },
+    {
+      "dni": "73639669",
+      "phone": "999546238",
+      "provider": "San Joel Drinks Company",
+      "order": "3",
+      "item": " Doña Pepa , Cola KR Soda",
+      "image": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/styles/bi_570/public/media/image/2022/01/ces-2022-2582123.jpg?itok=D5YEuU3R\","
+    }
+  ],
   "suppliers": [
     {
       "supplierName": "San Joel Drinks Company",

@@ -94,7 +94,7 @@ export default {
 
     console.log(this.id)
     this.supplierService = new SuppliersApiService();
-    this.supplierService.getById(this.id).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
+    this.supplierService.getById(this.id).then((response) => {    //getBjson-server --watch db.json --routes routes.jsonyId configurar para inicio de sesion copio el id del que inicio sesión
       this.supplier = response.data;
     });
   },

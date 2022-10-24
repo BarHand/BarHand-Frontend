@@ -54,6 +54,16 @@ const router = createRouter({
       name: 'add',
       component: ()=>import('../store/pages/store-supplier-add.component.vue'),
     },
+    {
+      path: "/purchase-edit/:id",
+      name: "purchase-edit",
+      component: ()=>import('../purchase/pages/purchase-edit.component.vue'),
+    },
+    {
+      path: "/purchase/:id",
+      name: "purchase",
+      component: ()=>import('../purchase/pages/purchase.component.vue'),
+    }
 
   ]
 })
