@@ -44,29 +44,18 @@
                  <pv-button label="Sign Up" icon="pi pi-user-plus" class="p-button-success" v-on:keydown="validate()"   > </pv-button>
                </RouterLink>
             </div>
-
         </div>
       </template>
-
     </pv-card>
-
   </div>
-
   </body>
-
-
 </template>
-
 <script>
-
-
 import {StoresApiService} from "@/store/services/stores-api.service";
 import {SuppliersApiService} from "@/supplier/services/suppliers-api.service";
 
 export default {
   name: "sign-in.component",
-
-
   data() {
     return {
       id:Number,
@@ -93,34 +82,20 @@ export default {
     });
   },
   methods: {
-
-
     validate(){
-      if (this.typeUser==="Supplier"){
-        this.user= this.suppliers.filter((supplier)=>{
-          return supplier.name === this.userName
-        });
-        if(this.user.name===this.userName && this.user.password===this.password){
-          this.$router.$push({path: `/supplier/${this.user.id}/store-home`});
-        }
-
-
+      if (this.typeUser==="Supplier") {
+        this.user = this.suppliers.find(supplier =>
+            supplier.name === this.userName && supplier.password === this.password);
+        this.id = Number(this.user.id);
+        this.$router.push({path: `/supplier/${this.id}/supplier-profile`});
       } else if (this.typeUser==="Store"){
         this.user= this.stores.find(store=>
            store.name === this.userName && store.password===this.password);
          this.id=Number(this.user.id);
          this.$router.push({path: `/store/${this.id}/store-profile`});
-
-
       }
-
     },
 
-    toRoute(  ){
-      if(this.typeUser==="Store"){
-        this.$router.push({path: `/store/${this.id}/store-profile`});
-      }
-    }
   }
 
 };
