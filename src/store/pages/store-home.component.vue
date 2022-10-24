@@ -1,29 +1,28 @@
 <template>
+
   <div class="card">
-    <pv-carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+    <pv-carousel :value="products" :numVisible="5" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
       <template #header>
-        <h1>products  posts</h1>
+        <h1>Best products sales</h1>
       </template>
       <template #item="slotProps">
-        <div class="product-grid-item card">
-        <div class="product-grid-item-top">
-          <div>
-            <i class="pi pi-tag product-category-icon"></i>
-            <span class="product-category">{{slotProps.data.category}}</span>
+        <div class="product-item">
+          <div class="product-item-content">
+            <div class="mb-3">
+              <img :src="slotProps.data.image" :alt="slotProps.data.name" class="product-image" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{slotProps.data.name}}</h4>
+              <h6 class="mt-0 mb-3">${{slotProps.data.price}}</h6>
+              <span :class="'product-badge status-'+String(slotProps.data.available).toLowerCase()">{{slotProps.data.available}}</span>
+              <div class="car-buttons mt-5">
+                <pv-button icon="pi pi-search" class="p-button p-button-rounded mr-2" />
+                <pv-button icon="pi pi-star-fill" class="p-button-success p-button-rounded mr-2" />
+                <pv-button icon="pi pi-cog" class="p-button-help p-button-rounded" />
+              </div>
+            </div>
           </div>
-          <span :class="'product-badge status-'+String(slotProps.data.available).toLowerCase()">{{slotProps.data.available}}</span>
         </div>
-        <div class="product-grid-item-content">
-          <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
-          <div class="product-name">{{slotProps.data.name}}</div>
-          <div class="product-description">{{slotProps.data.description}}</div>
-          <pv-rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></pv-rating>
-        </div>
-        <div class="product-grid-item-bottom">
-          <span class="product-price">${{slotProps.data.price}}</span>
-          <pv-button icon="pi pi-shopping-cart" :disabled="slotProps.data.available = false"></pv-button>
-        </div>
-      </div>
 
       </template>
 
@@ -34,14 +33,11 @@
 <script>
 
 import {ProductsApiService} from "@/inventory/services/products-api.service";
-/*<router-link to="/posts">
-        <pv-button icon="pi pi-plus" label="See More" />
-      </router-link>*/
 export default {
   name: "store-home.component",
   data() {
     return {
-      products: null,
+      products: [],
       productService: null,
       responsiveOptions: [
         {
@@ -55,7 +51,7 @@ export default {
           numScroll: 2
         },
         {
-          breakpoint: '480px',
+          breakpoint: '550px',
           numVisible: 1,
           numScroll: 1
         }
@@ -66,103 +62,29 @@ export default {
     this.productService = new ProductsApiService();
     this.productService.getAll().then((response) => {
       this.products = response.data;
+      this.products=this.products.filter( x=>{
+        return String(x.rating)=== '5' //return products with 5 stars
+      } )
     });
+
   },
 
 }
 </script>
 
 <style lang="scss" scoped>
-  .card {
-    background: #ffffff;
-    padding: 2rem;
-    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-    border-radius: 4px;
-    margin-bottom: 2rem;
-  }
-.p-dropdown {
-  width: 14rem;
-  font-weight: normal;
-}
-
-.product-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.product-description {
-  margin: 0 0 1rem 0;
-}
-
-.product-category-icon {
-  vertical-align: middle;
-  margin-right: .5rem;
-}
-
-.product-category {
-  font-weight: 600;
-  vertical-align: middle;
-}
-
-
-
-::v-deep(.product-grid-item) {
-  margin: .5rem;
-  border: 1px solid var(--surface-border);
-
-  .product-grid-item-top,
-  .product-grid-item-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  img {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    margin: 2rem 0;
-    width: 200px;
-    height:  200px;
-  }
-
-  .product-grid-item-content {
+.product-item {
+  .product-item-content {
+    border: 1px solid var(--surface-border);
+    border-radius: 3px;
+    margin: .3rem;
     text-align: center;
+    padding: 2rem 0;
   }
 
-  .product-price {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-}
-
-@media screen and (max-width: 100px) {
-  .product-list-item {
-    flex-direction: column;
-    align-items: center;
-
-    img {
-      margin: 2rem 0;
-    }
-
-    .product-list-detail {
-      text-align: center;
-    }
-
-    .product-price {
-      align-self: center;
-    }
-
-    .product-list-action {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-list-action {
-      margin-top: 2rem;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
+  .product-image {
+    max-width: 80%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   }
 }
 </style>
