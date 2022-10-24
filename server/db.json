@@ -216,11 +216,13 @@
     {
       "name": "Chicha Morada Drink",
       "category": "Food and Beverage",
-      "image": "https://s3.amazonaws.com/bsalemarket/39452/product/AGU390CHIdefault.jpg",
+      "image": "https://www.tienda-peruana.com/3252-tm_home_default/concentrado-de-chicha-morada-valle-fertil-1l.jpg",
       "available": true,
       "description": "Purple corn drink (600 ml)",
       "id": 1,
-      "supplierID": 1
+      "supplierID": 1,
+      "rating": 1,
+      "price": 15
     },
     {
       "name": "Cola KR Soda",
@@ -229,7 +231,9 @@
       "available": true,
       "description": "Orange flavoured soda (600 ml)",
       "id": 2,
-      "supplierID": 1
+      "supplierID": 1,
+      "rating": 3,
+      "price": 65
     },
     {
       "name": "JBL Speaker",
@@ -238,7 +242,9 @@
       "available": true,
       "description": "Wireless bluetooth JBL speaker",
       "id": 3,
-      "supplierID": 2
+      "supplierID": 2,
+      "rating": 2,
+      "price": 65
     },
     {
       "name": "Dron XTX",
@@ -247,7 +253,9 @@
       "available": true,
       "description": "Cool flying robot ",
       "id": 4,
-      "supplierID": 2
+      "supplierID": 2,
+      "rating": 3,
+      "price": 15
     },
     {
       "name": "Primor oil",
@@ -256,7 +264,9 @@
       "available": true,
       "description": "Quality oil for your health care",
       "id": 5,
-      "supplierID": 3
+      "supplierID": 3,
+      "rating": 1,
+      "price": 15
     },
     {
       "name": "Mazola oil",
@@ -265,7 +275,9 @@
       "available": true,
       "description": "Low in saturated fat",
       "id": 6,
-      "supplierID": 3
+      "supplierID": 3,
+      "rating": 2,
+      "price": 15
     },
     {
       "name": "Beats headphones",
@@ -274,7 +286,9 @@
       "available": true,
       "description": "wireless headphones",
       "id": 7,
-      "supplierID": 2
+      "supplierID": 2,
+      "rating": 1,
+      "price": 18
     },
     {
       "name": "Frutaris Drink",
@@ -283,7 +297,9 @@
       "available": true,
       "description": "Citrus fruit flavor (500 ml)",
       "id": 8,
-      "supplierID": 1
+      "supplierID": 1,
+      "rating": 4,
+      "price": 17
     },
     {
       "name": "Sprite soda",
@@ -292,7 +308,9 @@
       "available": true,
       "description": "Lemon-lime flavor (600 ml)",
       "id": 9,
-      "supplierID": 1
+      "supplierID": 1,
+      "rating": 3,
+      "price": 11
     },
     {
       "name": "Pepsi soda",
@@ -301,7 +319,9 @@
       "available": true,
       "description": "sugary drink and cola (500 ml)",
       "id": 10,
-      "supplierID": 1
+      "supplierID": 1,
+      "rating": 1,
+      "price": 13
     },
     {
       "name": "Atun Campomar",
@@ -310,7 +330,9 @@
       "available": true,
       "description": "Campomar tuna chunks in vegetable oil (170gr can)",
       "id": 11,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 5,
+      "price": 18
     },
     {
       "name": "Atun Florida",
@@ -319,7 +341,9 @@
       "available": true,
       "description": "Florida tuna fillet in vegetable oil(170gr can)",
       "id": 12,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 4,
+      "price": 19
     },
     {
       "name": "Atun Fannys",
@@ -328,7 +352,9 @@
       "available": true,
       "description": "Fannys tuna fillet in vegetable oil (170gr can)",
       "id": 13,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 2,
+      "price": 17
     },
     {
       "name": "Atun Primor",
@@ -337,7 +363,9 @@
       "available": true,
       "description": "Primor tuna fillet in vegetable oil (170gr can)",
       "id": 14,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 4,
+      "price": 14
     },
     {
       "name": "Atun Gloria",
@@ -346,7 +374,9 @@
       "available": true,
       "description": "Gloria tuna chunks in vegetable oil (170gr can)",
       "id": 15,
-      "supplierID": 9
+      "supplierID": 9,
+      "rating": 2,
+      "price": 15
     },
     {
       "name": "Milk Gloria",
@@ -355,7 +385,9 @@
       "available": true,
       "description": "Gloria Blue Milk 400 g - Can 400 g",
       "id": 16,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 3,
+      "price": 15
     },
     {
       "name": "Milk Aro",
@@ -364,7 +396,9 @@
       "available": true,
       "description": "Aro Milk 400 g with vitamin D - Can 400 g",
       "id": 17,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 5,
+      "price": 17
     },
     {
       "name": "Milk Ideal",
@@ -373,7 +407,9 @@
       "available": true,
       "description": "Ideal Milk- Can 400 g",
       "id": 18,
-      "supplierID": 9
+      "supplierID": 9,
+      "rating": 3,
+      "price": 8
     },
     {
       "name": "\ncasino cookie",
@@ -382,7 +418,9 @@
       "available": true,
       "description": "vanilla cookie filled with chocolate flavor",
       "id": 19,
-      "supplierID": 8
+      "supplierID": 8,
+      "rating": 5,
+      "price": 10
     },
     {
       "name": "\ncasino cookie",
@@ -391,7 +429,9 @@
       "available": true,
       "description": "vanilla cookie filled with mint flavor",
       "id": 20,
-      "supplierID": 8
+      "supplierID": 8,
+      "rating": 4,
+      "price": 10
     },
     {
       "name": "Potato lays",
@@ -400,7 +440,9 @@
       "available": true,
       "description": "French fries flakes",
       "id": 21,
-      "supplierID": 8
+      "supplierID": 8,
+      "rating": 4,
+      "price": 15
     },
     {
       "name": "Doritos Snacks",
@@ -409,7 +451,9 @@
       "available": true,
       "description": "Corn Chips cheese",
       "id": 22,
-      "supplierID": 8
+      "supplierID": 8,
+      "rating": 3,
+      "price": 15
     },
     {
       "name": "Costeño Rice",
@@ -418,7 +462,9 @@
       "available": true,
       "description": "750 gr bag of rice",
       "id": 23,
-      "supplierID": 10
+      "supplierID": 10,
+      "rating": 4,
+      "price": 15
     },
     {
       "name": "Costeño Rice",
@@ -427,7 +473,9 @@
       "available": true,
       "description": "750 gr bag of rice",
       "id": 24,
-      "supplierID": 7
+      "supplierID": 7,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "Caisy Rice",
@@ -436,7 +484,9 @@
       "available": true,
       "description": "1000 gr bag of rice",
       "id": 25,
-      "supplierID": 7
+      "supplierID": 7,
+      "rating": 1,
+      "price": 15
     },
     {
       "name": "Dulfina sugar",
@@ -445,7 +495,9 @@
       "available": true,
       "description": "1000 gr bag of sugar",
       "id": 26,
-      "supplierID": 6
+      "supplierID": 6,
+      "rating": 4,
+      "price": 15
     },
     {
       "name": "Sulga sugar",
@@ -454,7 +506,9 @@
       "available": true,
       "description": "1000 gr bag of sugar",
       "id": 27,
-      "supplierID": 6
+      "supplierID": 6,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "Paisana menestras",
@@ -463,7 +517,9 @@
       "available": true,
       "description": "Split peas in 1 kg bag",
       "id": 28,
-      "supplierID": 6
+      "supplierID": 6,
+      "rating": 2,
+      "price": 15
     },
     {
       "name": "Inka Grains",
@@ -472,7 +528,9 @@
       "available": true,
       "description": "\nlentils in 1 kg bag",
       "id": 29,
-      "supplierID": 6
+      "supplierID": 6,
+      "rating": 1,
+      "price": 15
     },
     {
       "name": "Inka Trail",
@@ -481,7 +539,9 @@
       "available": true,
       "description": "Canary bean in bolda of 1 kg",
       "id": 30,
-      "supplierID": 7
+      "supplierID": 7,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "San luis water",
@@ -490,7 +550,9 @@
       "available": true,
       "description": "600ml bottled water",
       "id": 31,
-      "supplierID": 4
+      "supplierID": 4,
+      "rating": 3,
+      "price": 15
     },
     {
       "name": "San Mateo water",
@@ -499,7 +561,9 @@
       "available": true,
       "description": "600ml bottled water",
       "id": 32,
-      "supplierID": 4
+      "supplierID": 4,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "\nNoodles Don Vittorio",
@@ -508,7 +572,9 @@
       "available": true,
       "description": "Spaghetti bag 1kg",
       "id": 33,
-      "supplierID": 5
+      "supplierID": 5,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "Molitalia spaghetti",
@@ -517,7 +583,9 @@
       "available": true,
       "description": "Spaghetti bag 1kg",
       "id": 34,
-      "supplierID": 5
+      "supplierID": 5,
+      "rating": 4,
+      "price": 15
     },
     {
       "name": "Noodles Lavaggi",
@@ -526,7 +594,9 @@
       "available": true,
       "description": "Noodles bag 500gr",
       "id": 35,
-      "supplierID": 5
+      "supplierID": 5,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "Facundo beans",
@@ -535,7 +605,9 @@
       "available": true,
       "description": "\ncanned lentils",
       "id": 36,
-      "supplierID": 9
+      "supplierID": 9,
+      "rating": 5,
+      "price": 15
     },
     {
       "name": "Santys",
@@ -544,7 +616,9 @@
       "available": true,
       "description": "\ncanned mushrooms",
       "id": 37,
-      "supplierID": 9
+      "supplierID": 9,
+      "rating": 4,
+      "price": 15
     }
   ]
 }

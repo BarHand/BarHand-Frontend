@@ -56,6 +56,11 @@ const router = createRouter({
       component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
     },
     {
+      path: "/inventory",
+      name: "view-inventory",
+      component: ()=>import('../inventory/pages/view-inventory.vue'),
+    },
+    {
       path: "/supplier-profile-edit/:id",
       name: "supplier-profile-edit",
       component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),

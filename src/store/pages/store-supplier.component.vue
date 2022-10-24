@@ -50,7 +50,7 @@
 
 <script>
 import navbar from "@/views/TheNavigation.vue";
-import {ProductsApiService} from "@/supplier/services/products-api.service";
+import {ProductsApiService} from "@/inventory/services/products-api.service";
 
 export default {
   name: "store-supplier.component",

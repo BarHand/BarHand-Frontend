@@ -39,17 +39,17 @@
                 <i class="pi pi-tag product-category-icon"></i>
                 <span class="product-category">{{slotProps.data.category}}</span>
               </div>
-              <span :class="'product-badge status-'+String(slotProps.data.available).toLowerCase()">{{slotProps.data.available}}</span>
+              <span :class="'product-badge status-'+String(slotProps.data.available).toLowerCase()">{{slotProps.data.inventoryStatus}}</span>
             </div>
             <div class="product-grid-item-content">
               <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
               <div class="product-name">{{slotProps.data.name}}</div>
               <div class="product-description">{{slotProps.data.description}}</div>
-              <pv-rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></pv-rating>
+              <Rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></Rating>
             </div>
             <div class="product-grid-item-bottom">
               <span class="product-price">${{slotProps.data.price}}</span>
-              <pv-button icon="pi pi-shopping-cart" :disabled="String(slotProps.data.available)=== 'false'"></pv-button>
+              <pv-button icon="pi pi-shopping-cart" :disabled="slotProps.data.available = false"></pv-button>
             </div>
           </div>
         </div>
@@ -63,7 +63,6 @@ import {ProductsApiService} from "@/inventory/services/products-api.service";
 
 export default {
   name: "view-inventory",
-
   data() {
     return {
       products: {},

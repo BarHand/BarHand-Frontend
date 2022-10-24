@@ -18,11 +18,6 @@
                   <label for="password">Password</label>
                   <pv-input-text style="height: 15px;" id="password" type="password" v-model="this.password"/>
                 </div>
-
-
-
-
-
                 <div class="field">
                   <span class="details"> Type User :  </span>
                   <pv-select-button style="height: 25px;" v-model="typeUser" :options="optionsUser"
