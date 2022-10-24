@@ -11,7 +11,7 @@
           <div class="inline-block text-black font-bold text-center pt-4 pl-1 pr-2 mx-4">Producto</div>
           <div class="inline-block  text-black font-bold text-center pt-4  pl-5 pr-5 mx-4"></div>
           <router-link :to="{ name: 'add' }">
-            <pv-button  icon="pi pi-plus" label="Agregar"  />
+            <pv-button  icon="pi pi-plus" label="Agregar"   />
           </router-link >
         </div>
       </div>
