@@ -57,7 +57,7 @@
 <script>
 
 import {SuppliersApiService} from "../services/suppliers-api.service";
-import {ProductsApiService} from "../services/products-api.service";
+import {ProductsApiService} from "../../inventory/services/products-api.service";
 import {useRoute} from "vue-router";
 
 
