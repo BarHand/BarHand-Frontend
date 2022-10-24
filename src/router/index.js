@@ -22,28 +22,27 @@ const router = createRouter({
       component: ()=>import('../security/page/sign-in.vue'),
     },
     {
-      path: "/store/:sId",
+      path: "/store/:id",
       name: "store",
       component: ()=>import('../store/pages/store.component.vue'),
-      props:true,
       children:[
         {
-          path: "/store-home",
+          path: "store-home",
           name: "store-home",
           component: ()=>import('../store/pages/store-home.component.vue'),
         },
         {
-          path: "/store-profile",
+          path: "store-profile",
           name: "store-profile",
           component: ()=>import('../store/pages/store-profile.component.vue'),
         },
         {
-          path: "/store-orders",
+          path: "store-orders",
           name: "store-orders",
           component: ()=>import('../store/pages/store-orders.vue'),
         },
         {
-          path: "/store-profile-edit",
+          path: "store-profile-edit",
           name: "store-profile-edit",
           component: ()=>import('../store/pages/store-profile-edit.component.vue'),
         },
