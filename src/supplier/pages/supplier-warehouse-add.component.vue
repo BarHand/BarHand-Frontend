@@ -42,8 +42,16 @@ export default {
         image: "",
         available: true,
         description: "",
+        supplierID: null,
       }
     };
+  },
+
+  created() {
+    const route = useRoute();
+    this.product.supplierID = parseInt(route.params.id);
+    console.log(this.product.supplierID)
+
   },
 
   methods: {
@@ -53,7 +61,7 @@ export default {
       this.productService = new ProductsApiService();
       this.productService.create(this.product).then((response) => {
       });
-      this.$router.push({path: '/store'}); //redirect
+      this.$router.push({path: './warehouse'}); //redirect
     }
   }
 }

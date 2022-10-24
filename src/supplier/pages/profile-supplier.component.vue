@@ -1,26 +1,26 @@
 <template>
   <div class="profile">
     <div class="background" style="height: 100vh; margin: 0;padding: 0">
+
     <div id="sup">
       <img class="image-profile"
-          :src="this.supplier.image"
-
-
+          :src="supplier?.image"
       />
         <div>
           <span>
         <h1 class= "mb-1" style="margin: 0;color: darkblue">
-          "{{supplier.supplierName}}"
+          "{{supplier?.supplierName}}"
         </h1>
-        <h3 style="margin: 0;color: forestgreen">"{{supplier.name}}  {{supplier.lastName}}"</h3>
-        <p>"{{supplier.description}}"</p>
-        <p>Address:{{supplier.address}}</p> <p>Phone:{{supplier.phone}}</p>
-              <router-link :to="{ name: 'supplier-profile-edit', id}">
+        <h3 style="margin: 0;color: forestgreen">"{{supplier?.name}}  {{supplier?.lastName}}"</h3>
+        <p>"{{supplier?.description}}"</p>
+        <p>Address:{{supplier?.address}}</p> <p>Phone:{{supplier?.phone}}</p>
+            <router-link :to="{ name: 'supplier-profile-edit', id}">
             <pv-button id="button" label="Edit" />
           </router-link>
           </span>
         </div>
       </div>
+
     <div class="card">
       <pv-carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
         <template #header>
@@ -93,8 +93,8 @@ export default {
   created() {
     const route= useRoute();
     this.id = route.params.id;
-
     console.log(this.id)
+
     this.supplierService = new SuppliersApiService();
     this.supplierService.getById(this.id).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
       this.supplier = response.data;

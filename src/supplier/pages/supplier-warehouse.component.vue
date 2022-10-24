@@ -1,5 +1,4 @@
 <template>
-  <navbar></navbar>
   <div  class="page">
 
     <div class="main-table">
@@ -37,8 +36,7 @@
               </template>
             </pv-dialog>
 
-
-            <router-link :to="{ name: 'edit', params: { id: product.id }}">
+            <router-link :to="{ name: 'edit', params: { item: product.id }}">
             <pv-button  icon="pi pi-pencil" label="Editar"  />
             </router-link >
           </div>
@@ -49,24 +47,41 @@
 </template>
 
 <script>
-import navbar from "@/views/TheNavigation.vue";
-import {ProductsApiService} from "@/inventory/services/products-api.service";
+import {ProductsApiService} from "../../inventory/services/products-api.service";
+import {useRoute} from "vue-router/dist/vue-router";
 
 export default {
   name: "store-supplier.component",
-  components:{navbar},
   data(){
     return{
-      products: null,
+      supplierId: null,
+      allProducts: null,
+      products: [],
       productService: null,
       displayConfirmation: false,
     };
   },
   created() {
+
+    const route = useRoute();
+    this.supplierId = route.params.id;
+    console.log(this.supplierId)
+
     this.productService = new ProductsApiService();
     this.productService.getAll().then((response) => {
-      this.products = response.data;
+      this.allProducts = response.data;
+
+      for (let i = 0; i < this.allProducts.length; i += 1) {
+        console.log(this.allProducts[i].supplierID);
+        if(this.allProducts[i].supplierID === parseInt(this.supplierId)){
+          console.log(this.allProducts[i])
+          this.products.push(this.allProducts[i]);
+        }
+
+      }
     });
+
+
   },
 
   methods: {
@@ -97,7 +112,6 @@ export default {
 
 
 .page{
-  height: 100vh;
   background-color: #AFBACA;
 }
 

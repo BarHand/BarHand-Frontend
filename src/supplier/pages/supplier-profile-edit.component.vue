@@ -64,7 +64,7 @@
         </div>
       </div>
         </form>
-        <router-link :to="{name: 'profile-supplier'}">
+        <router-link :to="{name: 'supplier-profile'}">
           <pv-button id="button" label="Save" style="background-color: #9acb3c; width:100%" @click="update"/>
         </router-link>
     </div>

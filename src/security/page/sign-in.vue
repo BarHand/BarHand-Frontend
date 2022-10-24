@@ -79,6 +79,8 @@ export default {
   methods: {
     validate(){
       if (this.typeUser==="Supplier") {
+        console.log(this.userName);
+        console.log(this.password);
         this.user = this.suppliers.find(supplier =>
             supplier.name === this.userName && supplier.password === this.password);
         this.id = Number(this.user.id);
@@ -87,6 +89,7 @@ export default {
         this.user= this.stores.find(store=>
            store.name === this.userName && store.password===this.password);
          this.id=Number(this.user.id);
+
          this.$router.push({path: `/store/${this.id}/store-profile`});
       }
     },

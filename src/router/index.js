@@ -51,30 +51,43 @@ const router = createRouter({
     },
 
     {
-      path: "/profile-supplier/:id",
-      name: "profile-supplier",
-      component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+      path: "/supplier/:id",
+      name: "supplier",
+      component: ()=>import('../store/pages/store.component.vue'),
+      children:[
+        {
+          path: "supplier-profile",
+          name: "supplier-profile",
+          component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+        },
+        {
+          path: "supplier-profile-edit",
+          name: "supplier-profile-edit",
+          component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
+        },
+        {
+          path: "warehouse",
+          name: "warehouse",
+          component: ()=>import('../supplier/pages/supplier-warehouse.component.vue'),
+        },
+        {
+          path: "edit/:item",
+          name: "edit",
+          component: ()=>import('../supplier/pages/supplier-warehouse-edit.vue'),
+        },
+        {
+          path: 'add',
+          name: 'add',
+          component: ()=>import('../supplier/pages/supplier-warehouse-add.component.vue'),
+        },
+      ]
     },
     {
       path: "/inventory",
       name: "view-inventory",
       component: ()=>import('../inventory/pages/view-inventory.vue'),
     },
-    {
-      path: "/supplier-profile-edit/:id",
-      name: "supplier-profile-edit",
-      component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
-    },
-    {
-      path: "/edit/:id",
-      name: "edit",
-      component: ()=>import('../store/pages/store-supplier-edit.component.vue'),
-    },
-    {
-      path: '/add',
-      name: 'add',
-      component: ()=>import('../store/pages/store-supplier-add.component.vue'),
-    },
+
 
   ]
 })

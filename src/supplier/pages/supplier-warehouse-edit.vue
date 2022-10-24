@@ -44,7 +44,7 @@ export default {
 
   created() {
     const route = useRoute();
-    this.id = route.params.id;
+    this.id = route.params.item;
 
     console.log(this.id)
     this.productService = new ProductsApiService();
