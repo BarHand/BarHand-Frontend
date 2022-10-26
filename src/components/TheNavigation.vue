@@ -1,10 +1,8 @@
 <template>
-  <pv-menubar :model="navigationStore">
-    <template #start>
+  <pv-menubar   :model="navigationStore" class="mymenu" > <!--style="background-color: #457b9d"-->
+    <template #start >
       <h1 style="margin: 5px ;   padding: 1px;  ">BarHand</h1>
     </template>
-
-
   </pv-menubar>
 </template>
 
@@ -24,10 +22,10 @@ export default {
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
       navigationStore: [
-        {label: "Home", icon: 'pi pi-fw pi-home', to:"./store-home" },
-        {label: "Orders", icon: 'pi pi-fw pi-book', to: "./store-orders"},
-        {label: "Notification", icon: 'pi pi-fw pi-bell', to: "./store-home"},
-        {label: "Profile", icon: 'pi pi-fw pi-user', to: "./store-profile"},
+        {label: "Home", icon: 'pi pi-fw pi-home', to:{name:'store-home'}},
+        {label: "Orders", icon: 'pi pi-fw pi-book', to:{name:'store-orders'}},
+        {label: "Notification", icon: 'pi pi-fw pi-bell', to:{name:'store-home'}},
+        {label: "Profile", icon: 'pi pi-fw pi-user', to: {name:'store-profile'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
       //`store/${this.storeId}/store-home`
@@ -37,6 +35,28 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped >
+::v-deep.mymenu{
+  color: white;
+  background-color: #457b9d;
+  .p-menubar-start{
+    margin-right: auto ;
+  }
+
+  .p-menuitem {
+    background-color: #457b9d !important;
+    color: white !important;
+
+    .p-menuitem-icon{
+      color: white !important;
+    }
+  }
+
+
+}
 
 </style>
+
+
+
+

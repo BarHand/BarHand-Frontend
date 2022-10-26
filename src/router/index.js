@@ -32,7 +32,7 @@ const router = createRouter({
           component: ()=>import('../store/pages/store-home.component.vue'),
         },
         {
-          path: "store-profile",
+          path: "sProfile",
           name: "store-profile",
           component: ()=>import('../store/pages/store-profile.component.vue'),
         },
@@ -42,9 +42,14 @@ const router = createRouter({
           component: ()=>import('../store/pages/store-orders.vue'),
         },
         {
-          path: "store-profile-edit",
+          path: "sProfile-edit",
           name: "store-profile-edit",
           component: ()=>import('../store/pages/store-profile-edit.component.vue'),
+        },
+        {
+          path: "product-view/:pId",
+          name: "product-view",
+          component: ()=>import('../inventory/pages/product-view-store.vue'),
         },
 
       ]
@@ -61,20 +66,12 @@ const router = createRouter({
       component: ()=>import('../inventory/pages/view-inventory.vue'),
     },
     {
-      path: "/supplier-profile-edit/:id",
+      path: "/supplier-profile-edit",
       name: "supplier-profile-edit",
       component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
     },
-    {
-      path: "/edit/:id",
-      name: "edit",
-      component: ()=>import('../store/pages/store-supplier-edit.component.vue'),
-    },
-    {
-      path: '/add',
-      name: 'add',
-      component: ()=>import('../store/pages/store-supplier-add.component.vue'),
-    },
+
+
 
   ]
 })
