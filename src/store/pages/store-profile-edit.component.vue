@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <pv-card style="width: 30em">
+    <pv-card >
       <template #header>
         <img :src="this.imgOld" alt="" style="height: 15rem"/>
       </template>
@@ -103,18 +103,22 @@ export default {
       this.storeService = new StoresApiService();
       this.storeService.update(this.id, this.store).then((response) => {
       });
-     this.$router.push({path: './store-profile'}); //redirect
+     this.$router.push({name: 'store-profile'}); //redirect
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .flex {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 10px;
-  /*background-color: #9acb3c;*/
+
+  .p-card {
+    width: 30em;
+
+  }
 }
 </style>

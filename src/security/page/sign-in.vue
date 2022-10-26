@@ -82,12 +82,12 @@ export default {
         this.user = this.suppliers.find(supplier =>
             supplier.name === this.userName && supplier.password === this.password);
         this.id = Number(this.user.id);
-        this.$router.push({path: `/supplier/${this.id}/supplier-profile`});
+        this.$router.push({name:'supplier-home', params:{id:this.id} /*path: `/supplier/${this.id}/supplier-home`*/});
       } else if (this.typeUser==="Store"){
         this.user= this.stores.find(store=>
            store.name === this.userName && store.password===this.password);
          this.id=Number(this.user.id);
-         this.$router.push({path: `/store/${this.id}/store-profile`});
+         this.$router.push({name:'store-home', params:{id:this.id}});
       }
     },
 
