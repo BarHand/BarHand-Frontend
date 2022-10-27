@@ -1,4 +1,5 @@
 <template>
+  <GoBack/>
    <div class="flex">
     <div class="p-fluid grid">
       <div class="field col-12 md:col-4">
@@ -72,10 +73,11 @@
 import {useRoute} from "vue-router";
 import {SuppliersApiService} from "@/supplier/services/suppliers-api.service";
 import productBySupplier from "@/inventory/components/view-products-by-supplier.vue";
+import GoBack from "@/components/GoBack.vue";
 
 export default {
   name: "view-profile-supplier.component",
-components:{productBySupplier},
+components:{GoBack, productBySupplier},
 
 
   data(){

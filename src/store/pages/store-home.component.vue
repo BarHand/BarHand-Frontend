@@ -15,7 +15,7 @@
   <div class="card">
     <pv-carousel :value="products" :numVisible="5" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
       <template #header>
-        <div class="col-3" >;
+        <div class="col-5" >
         <h1 style="background-color: #457b9d; color: white ;padding: 10px;border-radius: 5px">Best products sales:</h1>
         </div>
       </template>

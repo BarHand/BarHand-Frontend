@@ -68,14 +68,18 @@
       </template>
     </pv-card>
   </div>
+  <GoBack/>
+
 </template>
 
 <script>
 import {StoresApiService} from "@/store/services/stores-api.service";
 import {useRoute} from "vue-router";
+import GoBack from "@/components/GoBack.vue";
 
 export default {
   name: "store-profile-edit",
+  components:{ GoBack},
   data() {
     return {
       id: 1,
