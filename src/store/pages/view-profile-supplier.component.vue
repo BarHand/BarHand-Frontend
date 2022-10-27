@@ -1,5 +1,7 @@
 <template>
-   <div class="flex">
+  <h1>view-profile-supplier</h1>
+  {{supplierId}}
+  <div class="flex">
     <div class="p-fluid grid">
       <div class="field col-12 md:col-4">
       <pv-card class="supplierCard">

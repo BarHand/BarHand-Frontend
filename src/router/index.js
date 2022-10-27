@@ -51,7 +51,11 @@ const router = createRouter({
           name: "product-view",
           component: ()=>import('../inventory/pages/product-view-store.vue'),
         },
-
+        {
+          path: "view-supplier-profile/:sId",
+          name: "view-supplier-profile",
+          component: ()=>import('../store/pages/view-profile-supplier.component.vue'),
+        }
       ]
     },
 
