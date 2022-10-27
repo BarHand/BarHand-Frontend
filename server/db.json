@@ -59,7 +59,8 @@
       "description": "San Joel Drinks Company is a Peruvian company that owns several supermarket chains. It began operations in 2004",
       "phone": "93132881233",
       "password": "diego.100",
-      "id": 1
+      "id": 1,
+      "rating": 4
     },
     {
       "supplierName": "Good Items Corp",
@@ -73,7 +74,8 @@
       "description": "Good Items Corp is a Peruvian company that sells multiple technology products. It began operations in 2016",
       "phone": "976067993",
       "password": "kamptec1",
-      "id": 2
+      "id": 2,
+      "rating": 4
     },
     {
       "id": 3,
@@ -87,7 +89,8 @@
       "category": "Food",
       "description": "venta de abarrotes y golosinas",
       "phone": "976849521",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 4,
@@ -101,7 +104,8 @@
       "category": "Grocery ",
       "description": "sale of groceries and products in general",
       "phone": "989756214",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 5,
@@ -115,7 +119,8 @@
       "category": "Food and Beverage",
       "description": "sale of food and soft drinks in general",
       "phone": "999564213",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 6,
@@ -129,7 +134,8 @@
       "category": "Grocery and drinks",
       "description": "It offers its customers sales of all kinds of groceries, soft drinks",
       "phone": "987954846",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 7,
@@ -143,7 +149,8 @@
       "category": "Grocery and sweets",
       "description": "sale of groceries and sweets",
       "phone": "987954623",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 8,
@@ -157,7 +164,8 @@
       "category": "Candys and Canned food",
       "description": "We offer sale of candies and canned food at the best prices",
       "phone": "985642135",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 9,
@@ -171,7 +179,8 @@
       "category": "Canned food",
       "description": "\nWe offer sale of canned food, such as tuna, beans, with the best deals and at the best prices",
       "phone": "985462878",
-      "password": "123456789"
+      "password": "123456789",
+      "rating": 4
     },
     {
       "id": 10,
@@ -185,31 +194,8 @@
       "category": "Food and beverage",
       "description": "We offer sale of beans, cereals, soft drinks, dairy products, at excellent prices",
       "phone": "939356287",
-      "password": "123456789"
-    },
-    {
-      "name": "",
-      "lastName": "",
-      "businessName": "",
-      "email": "",
-      "password": "",
-      "id": 11
-    },
-    {
-      "name": "sales_products",
-      "lastName": "Zurita",
-      "businessName": "Frito lays",
-      "email": "100007360323931",
-      "password": "1234Adc.",
-      "id": 12
-    },
-    {
-      "name": "sales_products",
-      "lastName": "Zurita",
-      "businessName": "Frito lays",
-      "email": "delamarzp@gmail.com",
-      "password": "1234Adc.",
-      "id": 13
+      "password": "123456789",
+      "rating": 4
     }
   ],
   "products": [
@@ -217,7 +203,7 @@
       "name": "Chicha Morada Drink",
       "category": "Food and Beverage",
       "image": "https://www.tienda-peruana.com/3252-tm_home_default/concentrado-de-chicha-morada-valle-fertil-1l.jpg",
-      "available": true,
+      "available": false,
       "description": "Purple corn drink (600 ml)",
       "id": 1,
       "supplierID": 1,
