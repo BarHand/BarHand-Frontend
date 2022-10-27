@@ -71,7 +71,7 @@
 <script>
 import {useRoute} from "vue-router";
 import {SuppliersApiService} from "@/supplier/services/suppliers-api.service";
-import productBySupplier from "@/inventory/components/product-by-supplier.vue";
+import productBySupplier from "@/inventory/components/view-products-by-supplier.vue";
 
 export default {
   name: "view-profile-supplier.component",

@@ -1,4 +1,10 @@
 <template>
+  <div >
+            <span class="p-input-icon-left "  style="width: 100% " >
+              <i class="pi pi-search " style="color: white;" />
+              <pv-input-text style="width: 100%;background-color:#66a3c9 ;color:white"  placeholder="Keyword Search" v-model="searchTerm" v-on:keydown="filter()" /> <!--v-model="filters1['global'].value"-->
+            </span>
+  </div>
   <div class="card">
     <pv-data-view :value="products" :layout="layout" :paginator="true" :rows="9" :sortOrder="sortOrder" :sortField="sortField">
       <template #header>
@@ -60,12 +66,16 @@
 
 <script>
 import {ProductsApiService} from "@/inventory/services/products-api.service";
+import {useRoute} from "vue-router";
+
 
 export default {
   name: "view-inventory",
 
+
   data() {
     return {
+      searchTerm:'',
       products: {},
       layout: 'grid',
       sortKey: null,
@@ -79,13 +89,37 @@ export default {
   },
   productService: null,
   created() {
-    this.productService = new ProductsApiService();
-    this.productService.getAll().then((response) => {
-      this.products = response.data;
-    });
+    const route = useRoute();
+    this.searchTerm = route.params.search;
+    this.applyfilterInit(this.searchTerm);
+
   },
 
   methods: {
+    filter(){
+     // this.productService = new ProductsApiService();
+      this.productService.getAll().then((response) => {
+        this.products = response.data;
+        if (this.searchTerm!= null)
+          this.products=this.products.filter(x=>x.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+              x.category.toLowerCase().includes(this.searchTerm.toLowerCase())||
+              String(x.available).toLowerCase().includes(this.searchTerm.toLowerCase())||
+              String(x.rating).toLowerCase().includes(this.searchTerm.toLowerCase())||
+              String(x.price).toLowerCase().includes(this.searchTerm.toLowerCase()))
+      });
+    },
+    applyfilterInit(filterName){
+      this.productService = new ProductsApiService();
+      this.productService.getAll().then((response) => {
+        this.products = response.data;
+        if (this.searchTerm!= null)
+          this.products=this.products.filter(x=>x.name.toLowerCase().includes(filterName.toLowerCase()) ||
+              x.category.toLowerCase().includes(filterName.toLowerCase())||
+              String(x.available).toLowerCase().includes(filterName.toLowerCase())||
+              String(x.rating).toLowerCase().includes(filterName.toLowerCase())||
+              String(x.price).toLowerCase().includes(filterName.toLowerCase()))
+      });
+    },
     onSortChange(event){
       const value = event.value.value;
       const sortValue = event.value;
@@ -100,7 +134,8 @@ export default {
         this.sortField = value;
         this.sortKey = sortValue;
       }
-    }
+    },
+
   }
 }
 </script>

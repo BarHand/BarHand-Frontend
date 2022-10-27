@@ -44,6 +44,24 @@
       "phone": "99132262",
       "address": "delamarzp",
       "image": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg"
+    },
+    {
+      "name": "delamar",
+      "lastName": "zurita",
+      "businessName": "lalala",
+      "email": "delamarzp@gmail.com",
+      "password": "123ABCde.",
+      "id": 5
+    },
+    {
+      "name": "Delamar",
+      "lastName": "Zurita",
+      "businessName": "Frito lays",
+      "email": "delamarzp@gmail.com",
+      "password": "1234ABCde",
+      "id": 6,
+      "phone": "991834864",
+      "storeName": "Marco Polo"
     }
   ],
   "suppliers": [
