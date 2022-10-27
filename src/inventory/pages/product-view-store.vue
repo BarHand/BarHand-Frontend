@@ -1,5 +1,4 @@
 <template>
-<h1>Products views</h1>
   <div class="product">
     <div class="product-grid-item card">
       <div class="product-grid-item-top">
@@ -23,14 +22,17 @@
       </div>
     </div>
   </div>
+ <GoBack></GoBack>
 </template>
 
 <script>
 import {useRoute} from "vue-router";
 import {ProductsApiService} from "@/inventory/services/products-api.service";
+import GoBack from "@/components/GoBack.vue";
 
 export default {
   name: "product-view-store",
+  components: {GoBack},
   data(){
     return{
       productId: Number,

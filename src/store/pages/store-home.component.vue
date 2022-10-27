@@ -1,7 +1,7 @@
 <template>
     <div class="p-inputgroup">
-      <pv-button icon="pi pi-search" />
-      <pv-input-text placeholder="Search product"  class="search"/>
+      <pv-button icon="pi pi-search" v-on:click="viewProducts()" />
+      <pv-input-text placeholder="Search product"  v-model="searchProduct"   class="search"/>
     </div>
   <pv-card class="homeCard" >
     <template #title >
@@ -15,7 +15,9 @@
   <div class="card">
     <pv-carousel :value="products" :numVisible="5" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
       <template #header>
-        <h1>Best products sales</h1>
+        <div class="col-5" >
+        <h1 style="background-color: #457b9d; color: white ;padding: 10px;border-radius: 5px">Best products sales:</h1>
+        </div>
       </template>
       <template #item="products">
         <div class="product-item">
@@ -39,6 +41,8 @@
     </pv-carousel>
   </div>
 
+
+
 </template>
 
 <script>
@@ -46,11 +50,14 @@
 import {ProductsApiService} from "@/inventory/services/products-api.service";
 import {StoresApiService} from "@/store/services/stores-api.service";
 import {useRoute} from "vue-router";
+
 export default {
+
   name: "store-home.component",
   data() {
     return {
       id:Number,
+      searchProduct:'',
       products: [],
       productService: null,
       storeData: {},
@@ -85,6 +92,9 @@ export default {
 
   },
   methods: {
+    viewProducts(){
+      this.$router.push({name: 'view-all-products', params:{search:this.searchProduct}});
+    },
     getBestProduct(){
       this.productService = new ProductsApiService();
       this.productService.getAll().then((response) => {

@@ -55,6 +55,11 @@ const router = createRouter({
           path: "view-supplier-profile/:sId",
           name: "view-supplier-profile",
           component: ()=>import('../store/pages/view-profile-supplier.component.vue'),
+        } ,
+        {
+          path: "view-products/:search",
+          name: "view-all-products",
+          component: ()=>import('../inventory/pages/store-view-all-products.component.vue'),
         }
       ]
     },
@@ -64,11 +69,7 @@ const router = createRouter({
       name: "profile-supplier",
       component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
     },
-    {
-      path: "/inventory",
-      name: "view-inventory",
-      component: ()=>import('../inventory/pages/view-inventory.vue'),
-    },
+
     {
       path: "/supplier-profile-edit",
       name: "supplier-profile-edit",

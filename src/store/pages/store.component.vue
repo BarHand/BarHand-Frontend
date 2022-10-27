@@ -1,6 +1,6 @@
 <template>
   <TheNavigation></TheNavigation>
-  <RouterView />
+  <RouterView :key="$route.path"/>
 
 </template>
 

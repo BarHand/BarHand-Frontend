@@ -12,7 +12,7 @@
             </span>
           </div>
           <div class="field col-12 md:col-1" style="text-align: left  ">
-            <pv-drop-down style="width: 100%;" v-model="searchTerm" :options="sortOptions" optionLabel="label" placeholder="Sort By Price"
+            <pv-drop-down style="width: 100%;" v-model="sortkey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price"
                           @change="onSortChange($event)"/>
           </div>
           <div class="field col-12 md:col-1"  style="text-align: right  ">
@@ -91,6 +91,7 @@ export default {
       sortOrder: null,
       sortField: null,
       searchTerm:'',
+      sortKey: null,
       sortOptions: [
         {label: 'Price High to Low', value: '!price'},
         {label: 'Price Low to High', value: 'price'},
@@ -130,10 +131,11 @@ export default {
       if (value.indexOf('!') === 0) {
         this.sortOrder = -1;
         this.sortField = value.substring(1, value.length);
-        this.searchTerm = '';
+        this.sortKey = sortValue;
       } else {
         this.sortOrder = 1;
-        this.searchTerm = '';
+        this.sortField = value;
+        this.sortKey = sortValue;
       }
     },
     getTotalProducts(){
