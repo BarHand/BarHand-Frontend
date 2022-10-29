@@ -63,6 +63,18 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: "/supplier/:id",
+      name: "supplier",
+      component: ()=>import('../supplier/pages/supplier.component.vue'),
+      children:[
+        {
+          path: "supplier-home",
+          name: "supplier-home",
+          component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+        },
+      ]
+    },
 
     {
       path: "/profile-supplier/:id",
