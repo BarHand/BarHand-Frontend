@@ -78,23 +78,18 @@ const router = createRouter({
           name: "store-view",
           component: ()=>import('../store/pages/store-view-component.vue'),
         },
+        {
+          path: "/profile-supplier/:id",
+          name: "profile-supplier",
+          component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+        },
+        {
+          path: "/supplier-profile-edit/:id",
+          name: "supplier-profile-edit",
+          component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
+        },
       ]
     },
-
-    {
-      path: "/profile-supplier/:id",
-      name: "profile-supplier",
-      component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
-    },
-
-    {
-      path: "/supplier-profile-edit",
-      name: "supplier-profile-edit",
-      component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
-    },
-
-
-
   ]
 })
 
