@@ -88,6 +88,21 @@ const router = createRouter({
           name: "supplier-profile-edit",
           component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
         },
+        {
+          path: "/supplier-inventory/:id",
+          name: "supplier-inventory",
+          component:()=>import('../supplier/pages/supplier-inventory.vue'),
+        },
+        {
+          path: "/supplier-inventory/add-product/:id",
+          name:"supplier-inventory-add-product",
+          component:()=>import('../supplier/pages/supplier-inventory-add.vue')
+        },
+        {
+          path: "/supplier-inventory/edit-product/:id",
+          name:"supplier-inventory-edit-product",
+          component:()=>import('../supplier/pages/supplier-inventory-edit.vue')
+        },
       ]
     },
   ]
