@@ -18,7 +18,7 @@ export default {
         {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'supplier-home'}},
         {label: "Notification", icon: 'pi pi-fw pi-bell', to: {name:'supplier-home'}},
         {label: "Inventory", icon: 'pi pi-fw pi-box', to: "{name:'supplier-home'}"},
-        {label: "Profile", icon: 'pi pi-fw pi-user', to: "{name:'supplier-home'}"},
+        {label: "Profile", icon: 'pi pi-fw pi-user', to: "{name:'profile-supplier'}"},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
       navigationStore: [

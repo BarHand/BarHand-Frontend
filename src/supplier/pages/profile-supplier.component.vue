@@ -66,7 +66,7 @@ export default {
   data() {
     return {
       id:null,
-      supplier: null,
+      supplier: {},
       supplierService: null,
       products: null,
       productService:null,

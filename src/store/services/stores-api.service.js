@@ -27,4 +27,7 @@ export class StoresApiService {
     findByLastName(lastName) {
         return http.get(`/stores?title=${lastName}`);
     }
+    findBySupplierID(supplierID){
+        return http.get(`/stores?supplierID=${supplierID}`)
+    }
 }

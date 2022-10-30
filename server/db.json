@@ -9,10 +9,12 @@
       "phone": "987883513",
       "password": "santamaria3",
       "image": "https://www.tiendasmass.com.pe/img/Exterior.eb7bd7f8.jpg",
-      "id": 1
+      "id": 1,
+      "supplierID": 1
     },
     {
       "id": 2,
+      "supplierID": 1,
       "storeName": "Los Inkas Market12",
       "name": "Thomas",
       "lastName": "Campoy",
@@ -43,7 +45,8 @@
       "storeName": "Lola",
       "phone": "99132262",
       "address": "delamarzp",
-      "image": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg"
+      "image": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg",
+      "supplierID": 1
     },
     {
       "name": "delamar",
@@ -61,8 +64,23 @@
       "password": "1234ABCde",
       "id": 6,
       "phone": "991834864",
-      "storeName": "Marco Polo"
+      "storeName": "Marco Polo",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRl1nCIV3-uidq9d4c_3Xc9VXiWzcypZ433w&usqp=CAU",
+      "supplierID": 2
+    },
+    {
+      "name": "Bruce",
+      "lastName": "Cipriano",
+      "storeName": "La tiendita de Don Bruce",
+      "address": "Avenue El Golfo 1090",
+      "email": "Bruce",
+      "phone": "958642516",
+      "password": "bruce123",
+      "id": 7,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrXrzxs2CWSHaJwzubx6CWGgmZKnclM6_IGg&usqp=CAU",
+      "supplierID": 2
     }
+
   ],
   "suppliers": [
     {
