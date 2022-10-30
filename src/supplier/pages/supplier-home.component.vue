@@ -9,11 +9,9 @@
 
 <div class="container">
   <div class="card">
+ <h1>My Customer</h1>
     <pv-carousel :value="stores" :numVisible="1" :numScroll="1" orientation="vertical" verticalViewPortHeight="430px"
               style="max-width: 400px; margin-top: 2em">
-      <template #header>
-        <h1>My Customers</h1>
-      </template>
       <template #item="stores">
         <div class="store-item">
           <div class="store-item-content">
@@ -34,7 +32,15 @@
     </pv-carousel>
   </div>
   <div class="orderCard" >
-  <h1>My Orders</h1>
+    <h1>My Orders</h1>
+    <pv-card style="width: 25em">
+      <template #header>
+        <img src="https://softimiza.co/images/Noticias_2021/gestion-de-pedidos1.jpg" style="height: 15rem" />
+      </template>
+      <template #footer>
+        <pv-button icon="pi pi-check" label="Review" />
+      </template>
+    </pv-card>
   </div>
   <div>
 
@@ -131,6 +137,12 @@ export default {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+.orderCard{
+  margin:50px;
+}
+.card{
+  margin:50px;
 }
 .container{
   display: flex;

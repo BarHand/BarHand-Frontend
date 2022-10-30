@@ -120,7 +120,7 @@ export default {
   align-items: center;
 }
 #sup img {
-  max-width:500px;
+  max-width:350px;
   position:relative;
   top:0px;
   left:150px;

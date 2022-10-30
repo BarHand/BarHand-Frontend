@@ -4,7 +4,6 @@
       <h1 style="margin: 5px ;   padding: 1px;  ">BarHand</h1>
     </template>
   </pv-menubar>
-  <h1>{{user}}</h1>
 </template>
 
 <script>

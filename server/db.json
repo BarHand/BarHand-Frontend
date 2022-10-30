@@ -79,6 +79,42 @@
       "id": 7,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrXrzxs2CWSHaJwzubx6CWGgmZKnclM6_IGg&usqp=CAU",
       "supplierID": 2
+    },
+    {
+      "storeName": "Super Market",
+      "name": "Eugenia",
+      "lastName": "Mejía",
+      "email": "Emejia@gmail.com",
+      "address": "Street Bolivar 2057",
+      "phone": "987795513",
+      "password": "eugenia3",
+      "image": "https://nombresparatodo.com/wp-content/uploads/2019/11/aba-1024x576.jpg",
+      "id": 8,
+      "supplierID": 10
+    },
+    {
+      "storeName": "Fast Market",
+      "name": "Joseph",
+      "lastName": "Escobar",
+      "email": "Joes@gmail.com",
+      "address": "Street Los Girasoles 257",
+      "phone": "962313513",
+      "password": "escobar1",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsGiZXgnqxkQTtr_Aw-s-T1VYdqqUDf2RJPQ&usqp=CAU",
+      "id": 9,
+      "supplierID": 10
+    },
+    {
+      "storeName": "Market",
+      "name": "Juan",
+      "lastName": "Zevallos",
+      "email": "jzevas@gmail.com",
+      "address": "Street Bolivar 985",
+      "phone": "987878956",
+      "password": "zevallos3",
+      "image": "https://tecnofast.com.pe/wp-content/uploads/2022/08/DSC0046-1-scaled.jpg",
+      "id": 10,
+      "supplierID": 10
     }
   ],
   "suppliers": [

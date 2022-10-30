@@ -165,6 +165,6 @@ form .TypeUser {
   margin: 14px 0;
 }
 img {
-  width: 100%;
+  width: 40%;
 }
 </style>
