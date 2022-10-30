@@ -1,24 +1,28 @@
 <template>
-  <pv-menubar   :model="navigationStore" class="mymenu" > <!--style="background-color: #457b9d"-->
+  <pv-menubar   :model="getUser()" class="mymenu" > <!--style="background-color: #457b9d"-->
     <template #start >
       <h1 style="margin: 5px ;   padding: 1px;  ">BarHand</h1>
     </template>
   </pv-menubar>
+  <h1>{{user}}</h1>
 </template>
 
 <script>
+
+import {useRoute} from "vue-router/dist/vue-router";
 
 export default {
   name: "TheNavigation",
   data() {
 
     return {
+      user: String,
       navigationSupplier: [
         {label: "Home", icon: 'pi pi-fw pi-home', to: {name:'supplier-home'}},
         {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'supplier-home'}},
         {label: "Notification", icon: 'pi pi-fw pi-bell', to: {name:'supplier-home'}},
-        {label: "Inventory", icon: 'pi pi-fw pi-box', to: "{name:'supplier-home'}"},
-        {label: "Profile", icon: 'pi pi-fw pi-user', to: "{name:'profile-supplier'}"},
+        {label: "Inventory", icon: 'pi pi-fw pi-box', to: {name:'supplier-home'}},
+        {label: "Profile", icon: 'pi pi-fw pi-user', to: {name:'profile-supplier'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
       navigationStore: [
@@ -31,7 +35,22 @@ export default {
       //`store/${this.storeId}/store-home`
     }
   },
+  created() {
+    const route = useRoute();
+    this.user= route.matched[0].path;
+    this.user= this.user.substring(1, this.user.length-4)
+  },
+  methods:{
+    getUser(){
+      if(this.user==='supplier')
+        return this.navigationSupplier
+      else if (this.user==='store')
+        return this.navigationStore
+    },
+
+  }
 }
+
 </script>
 
 
