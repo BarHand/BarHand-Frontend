@@ -12,7 +12,7 @@
   </div>
   <div class="container">
     <div class="mt-5">
-      <pv-card style="width: 25em">
+      <pv-card style="width: 25em; background-color: #afbaca">
         <template #header>
           <img src="https://cuantas-calorias.org/wp-content/uploads/2017/11/GALLETAS-I.jpg" style="height: 15rem" />
         </template>
@@ -33,7 +33,7 @@
           <pv-button icon="pi pi-times" label="Delete" class="p-button-secondary" style="margin-left: .5em" />
         </template>
       </pv-card>
-      <pv-card style="width: 25em">
+      <pv-card style="width: 25em; background-color: #afbaca">
         <template #header>
           <img src="https://th.bing.com/th/id/OIP.dvoh8rRQinC14oYBqetGCwHaFj?pid=ImgDet&rs=1" style="height: 15rem" />
         </template>
@@ -56,7 +56,7 @@
       </pv-card>
     </div>
     <div class="mt-5">
-      <pv-card style="width: 25em">
+      <pv-card style="width: 25em; background-color: #afbaca">
         <template #header>
           <img src="https://userscontent2.emaze.com/images/4f35d47c-e75e-4016-bc7a-ba7f6c387dcd/42665f8ec7580d29d76636287e5403ff.png" style="height: 15rem" />
         </template>
@@ -77,7 +77,7 @@
           <pv-button icon="pi pi-times" label="Delete" class="p-button-secondary" style="margin-left: .5em" />
         </template>
       </pv-card>
-      <pv-card style="width: 25em">
+      <pv-card style="width: 25em; background-color: #afbaca">
         <template #header>
           <img src="https://www.vinoacasa.com/wp-content/uploads/2019/10/bizarra-amber-ale-12.png" style="height: 15rem" />
         </template>
@@ -117,6 +117,7 @@ p {
 }
 div{
   display: block;
+  margin: auto;
 }
 body {
   margin: 0;
@@ -128,4 +129,5 @@ body {
   align-content: start;
   row-gap: 10px;
 }
+
 </style>
