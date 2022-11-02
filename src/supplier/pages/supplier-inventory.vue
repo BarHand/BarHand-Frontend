@@ -105,6 +105,8 @@
 </template>
 
 <script>
+import {SuppliersApiService} from "../services/suppliers-api.service";
+
 export default {
   name: "supplier-inventory"
 }

@@ -45,11 +45,10 @@ export default {
   name: "supplier-inventory-edit",
   data() {
     return {
-      city: null,
+      products: null,
       avaliable: [
         {name: 'Stock', key: 'Y'},
         {name: 'No Stock', key: 'N'},
-
       ],
       selectoption: null
     }

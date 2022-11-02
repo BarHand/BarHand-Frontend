@@ -45,7 +45,7 @@ export default {
   name: "supplier-inventory-add",
   data() {
     return {
-      city: null,
+      products: null,
       avaliable: [
         {name: 'Stock', key: 'Y'},
         {name: 'No Stock', key: 'N'},
