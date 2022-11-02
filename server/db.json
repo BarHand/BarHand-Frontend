@@ -267,6 +267,14 @@
       "phone": "939356287",
       "password": "123456789",
       "rating": 4
+    },
+    {
+      "name": "Anderson",
+      "lastName": "Ore",
+      "businessName": "Anderson",
+      "email": "u202011467@upc.edu.pe",
+      "password": "aaaaaaaaaa",
+      "id": 11
     }
   ],
   "products": [
@@ -282,7 +290,7 @@
       "price": 15
     },
     {
-      "name": "Cola KR Soda",
+      "name": "Cola KR Sodaaaa",
       "category": "Food and Beverage",
       "image": "https://transmarket.pe/wp-content/uploads/2020/06/KR-NARANJA-1700-ML.jpg",
       "available": true,
