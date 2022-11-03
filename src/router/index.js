@@ -103,6 +103,11 @@ const router = createRouter({
           name: 'addItem',
           component: ()=>import('../supplier/pages/supplier-inventory-add.component.vue'),
         },
+        {
+          path: 'notifications',
+          name: 'notifications',
+          component: ()=>import('../supplier/pages/supplier-notifications.component.vue'),
+        }
       ]
     },
   ]

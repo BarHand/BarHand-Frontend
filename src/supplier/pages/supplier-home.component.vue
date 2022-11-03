@@ -54,6 +54,7 @@ import {ProductsApiService} from "@/inventory/services/products-api.service";
 import {SuppliersApiService} from "../services/suppliers-api.service";
 import {StoresApiService} from "../../store/services/stores-api.service";
 
+
 export default {
   name: "supplier-home.component",
   data() {

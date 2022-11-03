@@ -131,7 +131,20 @@
       "phone": "93132881233",
       "password": "diego.100",
       "id": 1,
-      "rating": 4
+      "rating": 4,
+      "notifications": [{
+        "id": 1,
+        "title": "Tienes una oferta pendiente",
+        "time": "1",
+        "storeId": 2
+
+      },{
+        "id": 2,
+        "title": "Ha recibido un pedido",
+        "time": "1",
+        "storeId": 4
+      }
+      ]
     },
     {
       "supplierName": "Good Items Corp",
