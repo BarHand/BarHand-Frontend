@@ -103,6 +103,12 @@ const router = createRouter({
           name:"supplier-inventory-edit-product",
           component:()=>import('../supplier/pages/supplier-inventory-edit.vue')
         },
+        {
+          path:"/supplier-plans/:id",
+          name:"supplier-plan",
+          component:()=>import('../supplier/pages/supplier-plans.vue')
+        },
+
       ]
     },
   ]
