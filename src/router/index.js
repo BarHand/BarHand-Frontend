@@ -74,9 +74,13 @@ const router = createRouter({
       path: "/supplier-profile-edit",
       name: "supplier-profile-edit",
       component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
+    }
+    ,
+    {
+      path: "/list-supplier/",
+      name: "list-supplier",
+      component: () => import("../store/pages/list-supplier.component.vue"),
     },
-
-
 
   ]
 })
