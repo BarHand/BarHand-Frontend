@@ -60,7 +60,15 @@ const router = createRouter({
           path: "view-products/:search",
           name: "view-all-products",
           component: ()=>import('../inventory/pages/store-view-all-products.component.vue'),
+        },
+        {
+          path: 'notifications',
+          name: 'notifications-store',
+          component: ()=>import('../store/pages/store-notifications.component.vue'),
+
+
         }
+
       ]
     },
     {

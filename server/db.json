@@ -10,7 +10,13 @@
       "password": "santamaria3",
       "image": "https://www.tiendasmass.com.pe/img/Exterior.eb7bd7f8.jpg",
       "id": 1,
-      "supplierID": 1
+      "supplierID": 1,
+      "notifications": [{
+        "id": 1,
+        "title": "Tienes una oferta pendiente",
+        "time": "1",
+        "supplierId": 2
+      }]
     },
     {
       "id": 2,
