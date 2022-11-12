@@ -67,7 +67,7 @@ export default {
   },
   created() {
     const route = useRoute();
-    this.id = route.params.id;
+    this.id = route.params.pId;
 
 
     //console.log(this.id)

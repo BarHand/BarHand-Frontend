@@ -49,7 +49,7 @@
             </div>
             <div class="product-list-action">
               <span class="product-price">${{ slotProps.data.price }}</span>
-              <router-link :to="{ name: 'supplier-inventory-edit-product', params: { id:slotProps.data.id }}">
+              <router-link :to="{ name: 'supplier-inventory-edit-product', params: { pId:slotProps.data.id }}">
                 <pv-button  icon="pi pi-pencil" label="Editar"  />
               </router-link >
               <pv-button label="Eliminar" icon="pi pi-trash" class="p-button-secondary" @click="openConfirmation" />
@@ -88,7 +88,7 @@
               <pv-rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></pv-rating>
             </div>
             <div class="product-grid-item-bottom">
-              <router-link :to="{ name: 'supplier-inventory-edit-product', params: { id:slotProps.data.id }}">
+              <router-link :to="{ name: 'supplier-inventory-edit-product', params: { pId:slotProps.data.id }}">
                 <pv-button  icon="pi pi-pencil" label="Editar"  />
               </router-link >
               <pv-button label="Eliminar" icon="pi pi-trash" class="p-button-secondary" @click="openConfirmation" />
@@ -164,6 +164,7 @@ export default {
     addProduct(){
       this.$router.push({name: 'supplier-inventory-add-product',params:{id:this.supplierId}});
     },
+
     onSortChange(event) {
       const value = event.value.value;
       const sortValue = event.value;

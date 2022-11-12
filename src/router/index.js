@@ -79,32 +79,32 @@ const router = createRouter({
           component: ()=>import('../store/pages/store-view-component.vue'),
         },
         {
-          path: "/profile-supplier/:id",
+          path: "profile-supplier",
           name: "profile-supplier",
           component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
         },
         {
-          path: "/supplier-profile-edit/:id",
+          path: "supplier-profile-edit",
           name: "supplier-profile-edit",
           component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
         },
         {
-          path: "/supplier-inventory/:id",
+          path: "supplier-inventory",
           name: "supplier-inventory",
           component:()=>import('../supplier/pages/supplier-inventory.vue'),
         },
         {
-          path: "/supplier-inventory/add-product/:id",
+          path: "supplier-inventory/add-product",
           name:"supplier-inventory-add-product",
           component:()=>import('../supplier/pages/supplier-inventory-add.vue')
         },
         {
-          path: "/supplier-inventory/edit-product/:id",
+          path: "supplier-inventory/edit-product/:pId",
           name:"supplier-inventory-edit-product",
           component:()=>import('../supplier/pages/supplier-inventory-edit.vue')
         },
         {
-          path:"/supplier-plans/:id",
+          path:"supplier-plans",
           name:"supplier-plan",
           component:()=>import('../supplier/pages/supplier-plans.vue')
         },
