@@ -19,7 +19,7 @@ export default {
       navigationSupplier: [
         {label: "Home", icon: 'pi pi-fw pi-home', to: {name:'supplier-home'}},
         {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'supplier-plan'}},
-        {label: "Notification", icon: 'pi pi-fw pi-bell', to: {name:'supplier-home'}},
+        {label: "Notification", icon: 'pi pi-fw pi-bell', to: {name:'notifications-supplier'}},
         {label: "Inventory", icon: 'pi pi-fw pi-box', to: {name:'supplier-inventory'}},
         {label: "Profile", icon: 'pi pi-fw pi-user', to: {name:'profile-supplier'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
@@ -27,7 +27,7 @@ export default {
       navigationStore: [
         {label: "Home", icon: 'pi pi-fw pi-home', to:{name:'store-home'}},
         {label: "Orders", icon: 'pi pi-fw pi-book', to:{name:'store-orders'}},
-        {label: "Notification", icon: 'pi pi-fw pi-bell', to:{name:'store-home'}},
+        {label: "Notification", icon: 'pi pi-fw pi-bell', to:{name:'notifications-store'}},
         {label: "Profile", icon: 'pi pi-fw pi-user', to: {name:'store-profile'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],

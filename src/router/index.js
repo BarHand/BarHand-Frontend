@@ -60,6 +60,13 @@ const router = createRouter({
           path: "view-products/:search",
           name: "view-all-products",
           component: ()=>import('../inventory/pages/store-view-all-products.component.vue'),
+        },
+        {
+          path: 'notifications',
+          name: 'notifications-store',
+          component: ()=>import('../views/Notifications.vue'),
+
+
         }
       ]
     },
@@ -108,6 +115,13 @@ const router = createRouter({
           name:"supplier-plan",
           component:()=>import('../supplier/pages/supplier-plans.vue')
         },
+        {
+          path: 'notifications',
+          name: 'notifications-supplier',
+          component: ()=>import('../views/Notifications.vue'),
+
+
+        }
 
       ]
     },
