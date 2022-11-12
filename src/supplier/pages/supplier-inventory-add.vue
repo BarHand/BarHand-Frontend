@@ -54,9 +54,11 @@
 import {ProductsApiService} from "@/inventory/services/products-api.service";
 import {useRoute} from "vue-router";
 import {StoresApiService} from "@/store/services/stores-api.service";
+import GoBack from "@/components/GoBack.vue";
 
 export default {
   name: "supplier-inventory-add",
+  components: {GoBack},
   data() {
     return {
        product:
