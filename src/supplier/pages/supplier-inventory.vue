@@ -2,13 +2,12 @@
   <body>
   <h1 class="header" style="text-align: center"> My Products</h1>
   <div align="center">
-    <router-link to="/supplier-inventory/add-product/:id">
-    <pv-button class="mat-focus-indicator but mat-raised-button mat-button-base">
+    <pv-button class="mat-focus-indicator but mat-raised-button mat-button-base" @click="addProduct()">
     <span class="mat-button-wrapper">Add new product</span>
       <span matripple class="mat-ripple mat-button-ripple"></span>
       <span class="mat-button-focus-overlay"></span>
     </pv-button>
-    </router-link>
+
   </div>
   <div class="card">
     <pv-data-view class="product-view" :value="products" :layout="layout" :paginator="true" :rows="9" :sortOrder="sortOrder"
@@ -149,6 +148,9 @@ export default {
               String(x.rating).toLowerCase().includes(this.searchTerm.toLowerCase())||
               String(x.price).toLowerCase().includes(this.searchTerm.toLowerCase()))
       });
+    },
+    addProduct(){
+      this.$router.push({name: 'supplier-inventory-add-product',params:{id:this.supplierId}});
     },
     onSortChange(event) {
       const value = event.value.value;
