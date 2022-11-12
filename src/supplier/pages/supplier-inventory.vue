@@ -49,8 +49,20 @@
             </div>
             <div class="product-list-action">
               <span class="product-price">${{ slotProps.data.price }}</span>
-              <pv-button icon="pi pi-shopping-cart" label="Add to Cart"
-                         :disabled="String(slotProps.data.available) === 'false'"></pv-button>
+              <router-link :to="{ name: 'supplier-inventory-edit-product', params: { id:slotProps.data.id }}">
+                <pv-button  icon="pi pi-pencil" label="Editar"  />
+              </router-link >
+              <pv-button label="Eliminar" icon="pi pi-trash" class="p-button-secondary" @click="openConfirmation" />
+              <pv-dialog header="Confirmacion" v-model:visible="displayConfirmation" :style="{width: '350px'}" :modal="true">
+                <div class="confirmation-content">
+                  <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem" />
+                  <span>Esta seguro que quiere eliminar este producto ?</span>
+                </div>
+                <template #footer>
+                  <pv-button label="No" icon="pi pi-times" @click="closeConfirmation" class="p-button-text"/>
+                  <pv-button label="Si" icon="pi pi-check" @click="closeConfirmation" v-on:click="deleteItem(slotProps.data.id)" class="p-button-text" autofocus />
+                </template>
+              </pv-dialog>
               <span
                   :class="'product-badge status-'">{{ slotProps.data.available }}</span>
             </div>
