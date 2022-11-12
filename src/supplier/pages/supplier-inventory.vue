@@ -10,126 +10,319 @@
     </pv-button>
     </router-link>
   </div>
-  <div class="container">
-    <div class="mt-5">
-      <pv-card style="width: 25em; background-color: #afbaca">
-        <template #header>
-          <img src="https://cuantas-calorias.org/wp-content/uploads/2017/11/GALLETAS-I.jpg" style="height: 15rem" />
-        </template>
-        <template #title>
-          Galletas McZure
-        </template>
-        <template #subtitle>
-          <h5>Dulces</h5>
-          <h5>No disponible</h5>
-        </template>
-        <template #content>
-          <p>Deliciosas galletas rellenas de chispas de diferentes sabores y colores para el deletite de cada persona</p>
-        </template>
-        <template #footer>
-          <router-link to="/supplier-inventory/edit-product/:id">
-          <pv-button icon="pi pi-check" label="Edit"/>
-          </router-link>
-          <pv-button icon="pi pi-times" label="Delete" class="p-button-secondary" style="margin-left: .5em" />
-        </template>
-      </pv-card>
-      <pv-card style="width: 25em; background-color: #afbaca">
-        <template #header>
-          <img src="https://th.bing.com/th/id/OIP.dvoh8rRQinC14oYBqetGCwHaFj?pid=ImgDet&rs=1" style="height: 15rem" />
-        </template>
-        <template #title>
-          Galletas Chocochips
-        </template>
-        <template #subtitle>
-          <h5>Dulces</h5>
-          <h5>Disponible</h5>
-        </template>
-        <template #content>
-          <p>Deliciosas galletas rellenas de chispas de chocolate</p>
-        </template>
-        <template #footer>
-          <router-link to="/supplier-inventory/edit-product/:id">
-            <pv-button icon="pi pi-check" label="Edit"/>
-          </router-link>
-          <pv-button icon="pi pi-times" label="Delete" class="p-button-secondary" style="margin-left: .5em" />
-        </template>
-      </pv-card>
-    </div>
-    <div class="mt-5">
-      <pv-card style="width: 25em; background-color: #afbaca">
-        <template #header>
-          <img src="https://userscontent2.emaze.com/images/4f35d47c-e75e-4016-bc7a-ba7f6c387dcd/42665f8ec7580d29d76636287e5403ff.png" style="height: 15rem" />
-        </template>
-        <template #title>
-          Papas Lays - Corte americano
-        </template>
-        <template #subtitle>
-          <h5>Snacks</h5>
-          <h5>Disponible</h5>
-        </template>
-        <template #content>
-          <p>Papas Lays al estilo americano!</p>
-        </template>
-        <template #footer>
-          <router-link to="/supplier-inventory/edit-product/:id">
-            <pv-button icon="pi pi-check" label="Edit"/>
-          </router-link>
-          <pv-button icon="pi pi-times" label="Delete" class="p-button-secondary" style="margin-left: .5em" />
-        </template>
-      </pv-card>
-      <pv-card style="width: 25em; background-color: #afbaca">
-        <template #header>
-          <img src="https://www.vinoacasa.com/wp-content/uploads/2019/10/bizarra-amber-ale-12.png" style="height: 15rem" />
-        </template>
-        <template #title>
-          Papas Kryspo
-        </template>
-        <template #subtitle>
-          <h5>Snacks</h5>
-          <h5>No Disponible</h5>
-        </template>
-        <template #content>
-          <p>Papas con sabor unico y exquisito</p>
-        </template>
-        <template #footer>
-          <router-link to="/supplier-inventory/edit-product/:id">
-            <pv-button icon="pi pi-check" label="Edit"/>
-          </router-link>
-          <pv-button icon="pi pi-times" label="Delete" class="p-button-secondary" style="margin-left: .5em" />
-        </template>
-      </pv-card>
+  <div class="card">
+    <pv-data-view class="product-view" :value="products" :layout="layout" :paginator="true" :rows="9" :sortOrder="sortOrder"
+                  :sortField="sortField">
+      <template #header style="background-color:#66a3c9 !important;" >
+        <div class="grid grid-nogutter">
 
-    </div>
+          <div class="field col-12 md:col-10"  >
+            <span class="p-input-icon-left "  style="width: 100% " >
+              <i class="pi pi-search" />
+              <pv-input-text style="width: 100%"  placeholder="Keyword Search" v-model="searchTerm" v-on:keydown="filter()" /> <!--v-model="filters1['global'].value"-->
+            </span>
+          </div>
+          <div class="field col-12 md:col-1" style="text-align: left  ">
+            <pv-drop-down style="width: 100%;" v-model="sortkey" :options="sortOptions" optionLabel="label" placeholder="Sort By Price"
+                          @change="onSortChange($event)"/>
+          </div>
+          <div class="field col-12 md:col-1"  style="text-align: right  ">
+            <pv-dataViewLayoutOption  v-model="layout"/>
+          </div>
+        </div>
+        <pv-card class="quantityProduct">
+          <template #title>
+            Total search products: {{getTotalProducts()}}
+          </template>
+        </pv-card>
+      </template>
+
+      <template #list="slotProps">
+        <div class="col-12">
+          <div class="product-list-item">
+            <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
+            <div class="product-list-detail">
+              <div class="product-name">{{ slotProps.data.name }}</div>
+              <div class="product-description">{{ slotProps.data.description }}</div>
+              <pv-rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></pv-rating>
+              <i class="pi pi-tag product-category-icon"></i><span
+                class="product-category">{{ slotProps.data.category }}</span>
+            </div>
+            <div class="product-list-action">
+              <span class="product-price">${{ slotProps.data.price }}</span>
+              <pv-button icon="pi pi-shopping-cart" label="Add to Cart"
+                         :disabled="String(slotProps.data.available) === 'false'"></pv-button>
+              <span
+                  :class="'product-badge status-'">{{ slotProps.data.available }}</span>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <template #grid="slotProps">
+        <div class="col-12 md:col-4">
+          <div class="product-grid-item card">
+            <div class="product-grid-item-top">
+              <div>
+                <i class="pi pi-tag product-category-icon"></i>
+                <span class="product-category">{{ slotProps.data.category }}</span>
+              </div>
+              <span
+                  :class="'product-badge status-'+String(slotProps.data.available).toLowerCase()">{{ slotProps.data.available }}</span>
+            </div>
+            <div class="product-grid-item-content">
+              <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
+              <div class="product-name">{{ slotProps.data.name }}</div>
+              <div class="product-description">{{ slotProps.data.description }}</div>
+              <pv-rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></pv-rating>
+            </div>
+            <div class="product-grid-item-bottom">
+              <router-link :to="{ name: 'supplier-inventory-edit-product', params: { id:slotProps.data.id }}">
+                <pv-button  icon="pi pi-pencil" label="Editar"  />
+              </router-link >
+              <pv-button label="Eliminar" icon="pi pi-trash" class="p-button-secondary" @click="openConfirmation" />
+              <pv-dialog header="Confirmacion" v-model:visible="displayConfirmation" :style="{width: '350px'}" :modal="true">
+                <div class="confirmation-content">
+                  <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem" />
+                  <span>Esta seguro que quiere eliminar este producto ?</span>
+                </div>
+                <template #footer>
+                  <pv-button label="No" icon="pi pi-times" @click="closeConfirmation" class="p-button-text"/>
+                  <pv-button label="Si" icon="pi pi-check" @click="closeConfirmation" v-on:click="deleteItem(slotProps.data.id)" class="p-button-text" autofocus />
+                </template>
+              </pv-dialog>
+            </div>
+          </div>
+        </div>
+      </template>
+    </pv-data-view>
   </div>
+
+
   </body>
 </template>
 
 <script>
-import {SuppliersApiService} from "../services/suppliers-api.service";
+import {ProductsApiService} from "@/inventory/services/products-api.service";
+import {useRoute} from "vue-router";
 
 export default {
-  name: "supplier-inventory"
+  name: "supplier-inventory",
+  data() {
+    return {
+      supplierId:Number,
+      products: {},
+      layout: 'grid',
+      sortOrder: null,
+      sortField: null,
+      searchTerm:'',
+      sortKey: null,
+      displayConfirmation: false,
+      sortOptions: [
+        {label: 'Price High to Low', value: '!price'},
+        {label: 'Price Low to High', value: 'price'},
+      ]
+    }
+  },
+  productService: null,
+  created() {
+    const route = useRoute();
+    this.supplierId = route.params.id;
+    this.getProductsBySupplier(this.supplierId)
+  },
+
+  methods: {
+    getProductsBySupplier(supplierId){
+      this.productService = new ProductsApiService();
+      this.productService.findBySupplierID(this.supplierId).then((response) => {
+        this.products = response.data;
+      });
+    },
+    filter(){
+      this.productService = new ProductsApiService();
+      this.productService.findBySupplierID(this.supplierId).then((response) => {
+        this.products = response.data;
+        if (this.searchTerm!= null)
+          this.products=this.products.filter(x=>x.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+              x.category.toLowerCase().includes(this.searchTerm.toLowerCase())||
+              String(x.available).toLowerCase().includes(this.searchTerm.toLowerCase())||
+              String(x.rating).toLowerCase().includes(this.searchTerm.toLowerCase())||
+              String(x.price).toLowerCase().includes(this.searchTerm.toLowerCase()))
+      });
+    },
+    onSortChange(event) {
+      const value = event.value.value;
+      const sortValue = event.value;
+
+      if (value.indexOf('!') === 0) {
+        this.sortOrder = -1;
+        this.sortField = value.substring(1, value.length);
+        this.sortKey = sortValue;
+      } else {
+        this.sortOrder = 1;
+        this.sortField = value;
+        this.sortKey = sortValue;
+      }
+    },
+    getTotalProducts(){
+      return this.products.length;
+    },
+    deleteItem(id){
+      this.productService = new ProductsApiService();
+      this.productService.delete(id).then((response) => {
+      });
+      this.$router.go(); //refresh
+    },
+    openConfirmation() {
+      this.displayConfirmation = true;
+    },
+    closeConfirmation() {
+      this.displayConfirmation = false;
+    },
+  }
 }
 </script>
 
-<style scoped>
-p {
-  line-height: 1.5;
-  margin: 0;
+<style lang="scss" scoped>
+::v-deep .product-view{
+.p-dataview-header{
+  background-color: #66a3c9;
 }
-div{
-  display: block;
-  margin: auto;
 }
-body {
-  margin: 0;
-  font-family: Roboto,Helvetica Neue,sans-serif;
+.quantityProduct{
+  background-color: #424242  ;
+  color: white ;
 }
-.container{
-  justify-content: space-around;
-  display:flex;
-  align-content: start;
-  row-gap: 10px;
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+.p-dropdown {
+  width: 14rem;
+  font-weight: normal;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-description {
+  margin: 0 0 1rem 0;
+}
+
+.product-category-icon {
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+.product-category {
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+::v-deep(.product-list-item) {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+
+img {
+  width: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-right: 2rem;
+}
+
+.product-list-detail {
+  flex: 1 1 0;
+}
+
+.p-rating {
+  margin: 0 0 .5rem 0;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  align-self: flex-end;
+}
+
+.product-list-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-button {
+  margin-bottom: .5rem;
+}
+}
+
+::v-deep(.product-grid-item) {
+  margin: .5rem;
+  border: 1px solid var(--surface-border);
+
+.product-grid-item-top,
+.product-grid-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 2rem 0;
+  max-width: 60%;
+  height: auto;
+}
+
+.product-grid-item-content {
+  text-align: center;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+}
+.search{
+  color :white !important;
+  background-color: #66a3c9 !important;
+}
+
+@media screen and (max-width: 576px) {
+  .product-list-item {
+    flex-direction: column;
+    align-items: center;
+
+  img {
+    margin: 2rem 0;
+  }
+
+  .product-list-detail {
+    text-align: center;
+  }
+
+  .product-price {
+    align-self: center;
+  }
+
+  .product-list-action {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-list-action {
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
 }
 
 </style>
