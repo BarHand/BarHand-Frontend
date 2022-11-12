@@ -1,12 +1,23 @@
 <template>
+  <h1></h1>
+  <div class="grid center-screen  card-div"  v-if="notifications === null">
+    <pv-card class="col-7 card-list  ">
+    <template #title >
+      Todo en orden !
+      <br>
+      No tiene notificaciones pendientes
+      <br>
+    </template>
+      <template #content>
+        <img src="https://cdn.discordapp.com/attachments/959280112279379968/1040804378401067109/unknown.png" alt="allGoodImg" class=" align-items-center justify-content-center">
+      </template>
 
-
-  <h3>Notifications</h3>
-
+  </pv-card>
+  </div>
   <div class="grid center-screen ">
-    <div class="col-7 card-div" v-for=" (supplier,index) in notifications" :key="supplier">
+    <div class="col-7 card-div" v-for=" (supplier,index) in notifications" :key="supplier" >
       <pv-card class=" card-list  ">
-        <template #title>
+        <template #title >
           {{supplier?.title }}
           <pv-button icon="pi pi-check" class="p-button-rounded" />
         </template>
@@ -83,5 +94,9 @@ export default {
   align-items: center;
   text-align: center;
 
+}
+
+img{
+  width: 50%;
 }
 </style>
