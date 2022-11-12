@@ -1,8 +1,8 @@
 <template>
   <pv-card class="homeCard" >
     <template #title >
-      <h1 >Hello {{storeData.name}} {{storeData.lastName}}</h1>
-      <p  style=" font-size: 20px;">We are happy to continue working with <b>{{storeData.storeName}}</b></p>
+      <h1 >Hello {{supplierData.name}} {{supplierData.lastName}}</h1>
+      <p  style=" font-size: 20px;">We are happy to continue working with <b>{{supplierData.supplierName}}</b></p>
     </template>
 
   </pv-card>

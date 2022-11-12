@@ -71,7 +71,7 @@ const router = createRouter({
         {
           path: "supplier-home",
           name: "supplier-home",
-          component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+          component: ()=>import('../supplier/pages/supplier-home.component.vue'),
         },
       ]
     },
