@@ -3,9 +3,9 @@
   <div class="grid center-screen  card-div"  v-if="notifications === null">
     <pv-card class="col-7 card-list  ">
     <template #title >
-      Todo en orden !
+      All good !
       <br>
-      No tiene notificaciones pendientes
+      You dont have pending notifications
       <br>
     </template>
       <template #content>
