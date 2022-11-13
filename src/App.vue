@@ -1,7 +1,5 @@
 <template>
-  <body>
   <RouterView />
-  </body>
 </template>
 
 <script >
