@@ -1,13 +1,13 @@
 <template>
-  <TheNavigation></TheNavigation>
+  <TheNavigation/>
   <RouterView :key="$route.path"/>
 
 </template>
 
 <script>
-import TheNavigation from "../../components/TheNavigation.vue";
+import TheNavigation from "@/components/TheNavigation.vue";
 export default {
-  name: "store.component",
+  name: "supplier.component",
   components:{
     TheNavigation
   },

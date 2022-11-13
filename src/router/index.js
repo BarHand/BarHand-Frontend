@@ -32,7 +32,7 @@ const router = createRouter({
           component: ()=>import('../store/pages/store-home.component.vue'),
         },
         {
-          path: "store-profile",
+          path: "sProfile",
           name: "store-profile",
           component: ()=>import('../store/pages/store-profile.component.vue'),
         },
@@ -42,40 +42,75 @@ const router = createRouter({
           component: ()=>import('../store/pages/store-orders.vue'),
         },
         {
-          path: "store-profile-edit",
+          path: "sProfile-edit",
           name: "store-profile-edit",
           component: ()=>import('../store/pages/store-profile-edit.component.vue'),
+        },
+        {
+          path: "product-view/:pId",
+          name: "product-view",
+          component: ()=>import('../inventory/pages/product-view-store.vue'),
+        },
+        {
+          path: "view-supplier-profile/:sId",
+          name: "view-supplier-profile",
+          component: ()=>import('../store/pages/view-profile-supplier.component.vue'),
+        } ,
+        {
+          path: "view-products/:search",
+          name: "view-all-products",
+          component: ()=>import('../inventory/pages/store-view-all-products.component.vue'),
+        }
+      ]
+    },
+    {
+      path: "/supplier/:id",
+      name: "supplier",
+      component: ()=>import('../supplier/pages/supplier.component.vue'),
+      children:[
+        {
+          path: "supplier-home",
+          name: "supplier-home",
+          component: ()=>import('../supplier/pages/supplier-home.component.vue'),
+        },
+        {
+          path: "store-view/:sId",
+          name: "store-view",
+          component: ()=>import('../store/pages/store-view-component.vue'),
+        },
+        {
+          path: "profile-supplier",
+          name: "profile-supplier",
+          component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
+        },
+        {
+          path: "supplier-profile-edit",
+          name: "supplier-profile-edit",
+          component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
+        },
+        {
+          path: "supplier-inventory",
+          name: "supplier-inventory",
+          component:()=>import('../supplier/pages/supplier-inventory.vue'),
+        },
+        {
+          path: "supplier-inventory/add-product",
+          name:"supplier-inventory-add-product",
+          component:()=>import('../supplier/pages/supplier-inventory-add.vue')
+        },
+        {
+          path: "supplier-inventory/edit-product/:pId",
+          name:"supplier-inventory-edit-product",
+          component:()=>import('../supplier/pages/supplier-inventory-edit.vue')
+        },
+        {
+          path:"supplier-plans",
+          name:"supplier-plan",
+          component:()=>import('../supplier/pages/supplier-plans.vue')
         },
 
       ]
     },
-
-    {
-      path: "/profile-supplier/:id",
-      name: "profile-supplier",
-      component: ()=>import('../supplier/pages/profile-supplier.component.vue'),
-    },
-    {
-      path: "/inventory",
-      name: "view-inventory",
-      component: ()=>import('../inventory/pages/view-inventory.vue'),
-    },
-    {
-      path: "/supplier-profile-edit/:id",
-      name: "supplier-profile-edit",
-      component: ()=>import('../supplier/pages/supplier-profile-edit.component.vue'),
-    },
-    {
-      path: "/edit/:id",
-      name: "edit",
-      component: ()=>import('../store/pages/store-supplier-edit.component.vue'),
-    },
-    {
-      path: '/add',
-      name: 'add',
-      component: ()=>import('../store/pages/store-supplier-add.component.vue'),
-    },
-
   ]
 })
 

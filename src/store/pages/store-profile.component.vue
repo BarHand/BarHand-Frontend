@@ -17,9 +17,9 @@
         <b>Phone:</b> {{store.phone}}<br>
       </template>
       <template #footer>
-        <router-link :to="{ name: 'store-profile-edit'}"><!--, id}-->
-        <pv-button icon="pi pi-user-edit" label="Edit"  style="width: 100%"/>
-        </router-link>
+
+        <pv-button v-on:click="editStore()" icon="pi pi-user-edit" label="Edit"  style="width: 100%"/>
+
       </template>
     </pv-card>
   </div>
@@ -42,16 +42,21 @@ export default {
   created() {
     const route= useRoute();
     this.id = route.params.id;
-
-
-
-    //console.log(this.id)
-    this.storeService = new StoresApiService();
-    this.storeService.getById(this.id).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
-      this.store = response.data;
-    });
-
+    this.getStore(this.id);
   },
+
+  methods: {
+    getStore(storeId){
+      this.storeService = new StoresApiService();
+      this.storeService.getById(storeId).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
+        this.store = response.data;
+      });
+
+    },
+    editStore(){
+      this.$router.push({name: 'store-profile-edit'});
+    }
+}
 }
 </script>
 
