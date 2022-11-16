@@ -52,6 +52,7 @@
               <div class="product-name">{{slotProps.data.name}}</div>
               <div class="product-description">{{slotProps.data.description}}</div>
               <pv-rating :modelValue="slotProps.data.rating" :readonly="true" :cancel="false"></pv-rating>
+
             </div>
             <div class="product-grid-item-bottom">
               <span class="product-price">${{slotProps.data.price}}</span>

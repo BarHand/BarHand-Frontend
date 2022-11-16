@@ -16,7 +16,7 @@
       </div>
       <div class="product-grid-item-bottom">
         <span class="product-price">${{productData.price}}</span>
-        <pv-button style="width: 150px; height: 40px;" icon="pi pi-user"  label="Supplier" v-on:click="viewSupplier(productData.supplierID)"></pv-button>
+        <pv-button style="width: 150px; height: 40px;" icon="pi pi-user"  label="Supplier" v-on:click="viewSupplier(productData.supplierId)"></pv-button>
         <pv-button  icon="pi pi-shopping-cart" :disabled="String(productData.available)  === 'false'"></pv-button>
 
       </div>
@@ -53,6 +53,7 @@ export default {
         this.productData=response.data;
       });
     },
+
 
     viewSupplier(supplierId){
       this.$router.push({name: 'view-supplier-profile',params:{sId:supplierId}});

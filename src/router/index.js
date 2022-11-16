@@ -127,5 +127,8 @@ const router = createRouter({
     },
   ]
 })
-
+router.beforeEach((to, from, next) => {
+  if (to.name !== 'sign-in' &&  to.name !== 'sign-up' && to.name !== 'home') next({ name: 'sign-in' })
+  else next()
+})
 export default router
