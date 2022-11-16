@@ -191,7 +191,7 @@ export default {
         this.supplier={
           name:this.name,
           lastName:this.lastName,
-          businessName:this.businessName,
+          supplierName:this.businessName,
           email:this.email,
           password:this.password,
         }
@@ -202,7 +202,7 @@ export default {
         this.store={
           name:this.name,
           lastName:this.lastName,
-          businessName:this.businessName,
+          storeName:this.businessName,
           email:this.email,
           password:this.password,
         }

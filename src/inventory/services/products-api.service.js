@@ -29,7 +29,7 @@ export class ProductsApiService {
         return http.get(`/products?title=${title}`);
     }
     findBySupplierID(supplierID){
-        return http.get(`/products?supplierID=${supplierID}`)
+        return http.get(`/supplier/${supplierID}/products`)
     }
 
 
