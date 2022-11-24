@@ -1,6 +1,6 @@
 <template>
   <h1></h1>
-  <div class="grid center-screen  card-div"  v-if="notifications === null">
+  <div class="grid center-screen  card-div"  v-if="notifications.length === 0">
     <pv-card class="col-7 card-list  ">
       <template #title >
         All good !
