@@ -1,0 +1,1 @@
+import{T as r}from"./TheNavigation.53c5c582.js";import{_ as s,h as e,j as o,k as c,l as p,D as i,F as m}from"./index.eefdc7f8.js";const _={name:"supplier.component",components:{TheNavigation:r}};function l(t,u,f,h,d,k){const n=e("TheNavigation"),a=e("RouterView");return o(),c(m,null,[p(n),(o(),i(a,{key:t.$route.path}))],64)}const v=s(_,[["render",l]]);export{v as default};
