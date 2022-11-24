@@ -64,7 +64,7 @@ const router = createRouter({
         {
           path: 'notifications',
           name: 'notifications-store',
-          component: ()=>import('../store/pages/store-notifications.component.vue'),
+          component: ()=>import('../notifications/notification.component.vue'),
 
 
         }
@@ -114,7 +114,7 @@ const router = createRouter({
         {
           path: 'notifications',
           name: 'notifications',
-          component: ()=>import('../supplier/pages/supplier-notifications.component.vue'),
+          component: ()=>import('../notifications/notification.component.vue'),
         }
       ]
     },
