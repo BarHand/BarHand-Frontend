@@ -9,7 +9,7 @@
         </p>
       </div>
       <template #footer>
-        <a href="/sign-in">
+        <a href="/">
         <div class="flex justify-content-center">
           <pv-button label="OK" @click="toggleDialog"  class="p-button-text" />
         </div>
